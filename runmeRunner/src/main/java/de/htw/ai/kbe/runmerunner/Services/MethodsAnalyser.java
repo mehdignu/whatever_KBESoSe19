@@ -16,6 +16,9 @@ public class MethodsAnalyser {
         //init class object
         this.clazz = Class.forName(className);
         this.fileName = fileName;
+
+        System.out.println(this.clazz);
+
     }
 
 

@@ -1,5 +1,6 @@
 package de.htw.ai.kbe.runmerunner.Services;
 
+
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
@@ -12,10 +13,10 @@ import java.io.File;
  */
 public class ParseHandler {
 
-    @Option(name="-c", required = true, usage="Classname")
+    @Option(name = "-c", required = true, usage = "Classname")
     public String classname;
 
-    @Option(name="-o",usage="Report")
+    @Option(name = "-o", usage = "Report")
     private File report;
 
 
@@ -60,7 +61,7 @@ public class ParseHandler {
     /**
      * @return The Class name
      */
-    public String getClassname(){
+    public String getClassname() {
         return classname;
     }
 
