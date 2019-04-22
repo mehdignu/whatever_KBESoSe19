@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Method;
+import de.htw.ai.kbe.runmerunner.Services.MethodsAnalyser;
 
 public class MethodsAnalyser {
 
@@ -38,7 +39,7 @@ public class MethodsAnalyser {
         for (Method method : clazz.getDeclaredMethods()) {
 
             //access the private methods
-            method.setAccessible(true);
+            //method.setAccessible(true);
 
             // if method is annotated with @RunMe
             if (method.isAnnotationPresent(RunMe.class)) {
@@ -47,8 +48,10 @@ public class MethodsAnalyser {
                 // RunMe test = (RunMe) annotation;
 
                 try {
+                	//access the private methods
+                    method.setAccessible(true);
                     //save the successfully invoked methods
-                    method.invoke(clazz.newInstance());
+                    method.invoke(clazz.getConstructor().newInstance());
 
                     success.append(method.getName()).append("\n");
 
