@@ -7,8 +7,8 @@
     <servlet-name>Echoing Servlet</servlet-name>
     <servlet-class>de.htw.ai.kbe.servlet.SongsServlet</servlet-class>
     <init-param>
-      <param-name>uriToDBComponent</param-name>
-      <param-value>db-uri:some.server/dbId</param-value>
+      <param-name>datapath</param-name>
+      <param-value>data/songs.xml</param-value>
     </init-param>
   </servlet>
 

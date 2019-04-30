@@ -73,10 +73,33 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.9.2</version>
     </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>echoServlet</finalName>
     <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <webResources>
+            <resource>
+              <directory>data</directory>
+              <targetPath>data</targetPath>
+              <includes>
+                <include>songs.xml</include>
+              </includes>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>

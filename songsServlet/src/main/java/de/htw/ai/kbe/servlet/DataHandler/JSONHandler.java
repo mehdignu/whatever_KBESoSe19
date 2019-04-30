@@ -1,4 +1,4 @@
-package de.htw.ai.kbe.echo.DataHandler;
+package de.htw.ai.kbe.servlet.DataHandler;
 
 public class JSONHandler {
 }

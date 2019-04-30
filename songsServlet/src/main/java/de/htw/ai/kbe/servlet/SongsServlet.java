@@ -12,17 +12,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 public class SongsServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+
+	private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
 
 	private String uriToDB = null;
 
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
 	    // Beispiel: Laden eines Konfigurationsparameters aus der web.xml
-		this.uriToDB = servletConfig.getInitParameter("uriToDBComponent");
+//		this.uriToDB = servletConfig.getInitParameter("uriToDBComponent");
+
+		BasicConfigurator.configure();
+		log.info("init()");
+
+		//get songs xml file path
+		String filePath = servletConfig.getServletContext().getRealPath(servletConfig.getInitParameter("datapath"));
+
+
+
+		log.info(filePath);
 	}
 
 	@Override
