@@ -8,15 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e32745f9-68cd-42e2-b9c7-d91572c22d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/JSONHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/JSONHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/XMLHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/XMLHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/echo/EchoServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/echo/EchoServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,20 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+            <state relative-caret-position="399">
+              <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="236">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#1863#1864#0" expanded="true" />
                 <element signature="e#1889#1890#0" expanded="true" />
@@ -110,8 +102,8 @@
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/JSONHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/XMLHandler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" />
       </list>
     </option>
   </component>
@@ -225,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556614741118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556615031460" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jaxbJacksonExamples" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -333,12 +325,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556610917396</updated>
-      <workItem from="1556610918643" duration="3783000" />
+      <workItem from="1556610918643" duration="3938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3783000" />
+    <option name="totallyTimeSpent" value="3938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -350,7 +342,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18705036" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18705036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.32937366" />
       <window_info anchor="bottom" id="Spring" />
@@ -386,20 +378,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/pojo/Songs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/XMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -414,21 +392,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/pojo/Songs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/XMLHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="236">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#1863#1864#0" expanded="true" />
             <element signature="e#1889#1890#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
         </state>
       </provider>
     </entry>

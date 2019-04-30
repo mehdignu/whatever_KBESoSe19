@@ -25,8 +25,6 @@ public class SongsServlet extends HttpServlet {
 
 	@Override
 	public void init(ServletConfig servletConfig) throws ServletException {
-	    // Beispiel: Laden eines Konfigurationsparameters aus der web.xml
-//		this.uriToDB = servletConfig.getInitParameter("uriToDBComponent");
 
 		BasicConfigurator.configure();
 		log.info("init()");
