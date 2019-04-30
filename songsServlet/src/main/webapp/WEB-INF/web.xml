@@ -5,7 +5,7 @@
          version="3.1">
   <servlet>
     <servlet-name>Echoing Servlet</servlet-name>
-    <servlet-class>de.htw.ai.kbe.echo.EchoServlet</servlet-class>
+    <servlet-class>de.htw.ai.kbe.servlet.SongsServlet</servlet-class>
     <init-param>
       <param-name>uriToDBComponent</param-name>
       <param-value>db-uri:some.server/dbId</param-value>
@@ -14,7 +14,7 @@
 
   <!--  DIE URL AN DAS SERVLET, WELCHES IN EINEM TOMCAT_SERVER LAEUFT IST:
         http://localhost:8080/echoServlet/echo
-        echoServlet ist die Bezeichnung der App, /echo ist Pfad zum Servlet
+        echoServlet ist die Bezeichnung der App, /servlet ist Pfad zum Servlet
    -->
   <servlet-mapping>
     <servlet-name>Echoing Servlet</servlet-name>
