@@ -3,6 +3,9 @@ package de.htw.ai.kbe.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -14,60 +17,92 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
+
 
 public class SongsServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
+    private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
 
-	private String uriToDB = null;
+    private String uriToDB = null;
 
-	@Override
-	public void init(ServletConfig servletConfig) throws ServletException {
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
 
-		BasicConfigurator.configure();
-		log.info("init()");
+        BasicConfigurator.configure();
+        log.info("init()");
 
-		//get songs xml file path
-		String filePath = servletConfig.getServletContext().getRealPath(servletConfig.getInitParameter("datapath"));
+        //get songs xml file path
+        String filePath = servletConfig.getServletContext().getRealPath(servletConfig.getInitParameter("datapath"));
+
+
+    }
+
+    @Override
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response) throws IOException {
+
+        // alle Parameter (keys)
+        Enumeration<String> paramNames = request.getParameterNames();
+
+        Map<String, String[]> params = request.getParameterMap();
+
+        
+        String urlPath = request.getPathInfo();
+
+        //verify the called URL
+        if(!((urlPath.substring(urlPath.lastIndexOf("/") + 1)).equals("songsServlet")) || urlPath.lastIndexOf("/") != 0){
+            sendResponse(400, Constants.BAD_PARAMS, response);
+        }
 
 
 
-		log.info(filePath);
-	}
 
-	@Override
-	public void doGet(HttpServletRequest request, 
-	        HttpServletResponse response) throws IOException {
-		// alle Parameter (keys)
-		Enumeration<String> paramNames = request.getParameterNames();
+            if (request.getParameterMap().containsKey("songId")) {
+                log.info(params.get("songId"));
 
-		String responseStr = "";
-		String param = "";
-		while (paramNames.hasMoreElements()) {
-			param = paramNames.nextElement();
-			responseStr = responseStr + param + "=" 
-			+ request.getParameter(param) + "\n";
-		}
-		response.setContentType("text/plain");
-		try (PrintWriter out = response.getWriter()) {
-			responseStr += "\n Your request will be sent to " + uriToDB;
-			out.println(responseStr);
-		}
-	}
+                String[] peep = params.get("songId");
+                
+                if (peep == null || peep.length != 1) {
+                    throw new IllegalArgumentException(Constants.BAD_PARAMS);
+                }
 
-	@Override
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		response.setContentType("text/plain");
-		ServletInputStream inputStream = request.getInputStream();
-		byte[] inBytes = IOUtils.toByteArray(inputStream);
-		try (PrintWriter out = response.getWriter()) {
-			out.println(new String(inBytes));
-		}
-	}
-	
-	protected String getUriToDB () {
-		return this.uriToDB;
-	}
+                int id = -1;
+
+                try {
+                     id = Integer.parseInt(peep[0]);
+
+                } catch (NumberFormatException e) {
+                    throw new IllegalArgumentException(Constants.BAD_PARAMS);
+                }
+
+                sendResponse(200, "this is your song id = " + id, response);
+
+            } else {
+                sendResponse(400, Constants.BAD_PARAMS, response);
+            }
+
+
+    }
+
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/plain");
+        ServletInputStream inputStream = request.getInputStream();
+        byte[] inBytes = IOUtils.toByteArray(inputStream);
+        try (PrintWriter out = response.getWriter()) {
+            out.println(new String(inBytes));
+        }
+    }
+
+
+    private void sendResponse(int code, String msg, HttpServletResponse response) throws IOException {
+        response.setContentType("text/plain");
+        response.setStatus(code);
+        try (PrintWriter out = response.getWriter()) {
+            out.println(msg);
+        }
+    }
 }

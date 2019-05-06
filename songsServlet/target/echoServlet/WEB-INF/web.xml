@@ -4,7 +4,7 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
   <servlet>
-    <servlet-name>Echoing Servlet</servlet-name>
+    <servlet-name>Songs Servlet</servlet-name>
     <servlet-class>de.htw.ai.kbe.servlet.SongsServlet</servlet-class>
     <init-param>
       <param-name>datapath</param-name>
@@ -17,7 +17,7 @@
         echoServlet ist die Bezeichnung der App, /servlet ist Pfad zum Servlet
    -->
   <servlet-mapping>
-    <servlet-name>Echoing Servlet</servlet-name>
-    <url-pattern>/echo</url-pattern>
+    <servlet-name>Songs Servlet</servlet-name>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
 </web-app>
