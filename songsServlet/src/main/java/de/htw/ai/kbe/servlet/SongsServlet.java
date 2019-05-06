@@ -17,57 +17,62 @@ import org.apache.log4j.Logger;
 
 public class SongsServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
+    private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
 
-	private String uriToDB = null;
+    private String uriToDB = null;
 
-	@Override
-	public void init(ServletConfig servletConfig) throws ServletException {
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
 
-		BasicConfigurator.configure();
-		log.info("init()");
+        BasicConfigurator.configure();
+        log.info("init()");
 
-		//get songs xml file path
-		String filePath = servletConfig.getServletContext().getRealPath(servletConfig.getInitParameter("datapath"));
+        //get songs xml file path
+        String filePath = servletConfig.getServletContext().getRealPath(servletConfig.getInitParameter("datapath"));
 
 
+    }
 
-		log.info(filePath);
-	}
+    @Override
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response) throws IOException {
 
-	@Override
-	public void doGet(HttpServletRequest request, 
-	        HttpServletResponse response) throws IOException {
-		// alle Parameter (keys)
-		Enumeration<String> paramNames = request.getParameterNames();
+        // alle Parameter (keys)
+        Enumeration<String> paramNames = request.getParameterNames();
 
-		String responseStr = "";
-		String param = "";
-		while (paramNames.hasMoreElements()) {
-			param = paramNames.nextElement();
-			responseStr = responseStr + param + "=" 
-			+ request.getParameter(param) + "\n";
-		}
-		response.setContentType("text/plain");
-		try (PrintWriter out = response.getWriter()) {
-			responseStr += "\n Your request will be sent to " + uriToDB;
-			out.println(responseStr);
-		}
-	}
+        if (paramNames.hasMoreElements()) {
 
-	@Override
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		response.setContentType("text/plain");
-		ServletInputStream inputStream = request.getInputStream();
-		byte[] inBytes = IOUtils.toByteArray(inputStream);
-		try (PrintWriter out = response.getWriter()) {
-			out.println(new String(inBytes));
-		}
-	}
-	
-	protected String getUriToDB () {
-		return this.uriToDB;
-	}
+            if (!request.getParameterMap().containsKey("songId")) {
+                sendResponse(400, "go away you", response);
+            } else {
+                //send back the wanted song
+                sendResponse(200, "the wanted song", response);
+            }
+        } else {
+            //check if the request have no parameters -> send all songs back
+            sendResponse(200, "all the songs", response);
+        }
+
+    }
+
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/plain");
+        ServletInputStream inputStream = request.getInputStream();
+        byte[] inBytes = IOUtils.toByteArray(inputStream);
+        try (PrintWriter out = response.getWriter()) {
+            out.println(new String(inBytes));
+        }
+    }
+
+
+    private void sendResponse(int code, String msg, HttpServletResponse response) throws IOException {
+        response.setContentType("text/plain");
+        response.setStatus(code);
+        try (PrintWriter out = response.getWriter()) {
+            out.println(msg);
+        }
+    }
 }
