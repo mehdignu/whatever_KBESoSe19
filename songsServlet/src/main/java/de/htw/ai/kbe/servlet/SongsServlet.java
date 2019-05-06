@@ -44,9 +44,6 @@ public class SongsServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws IOException {
 
-        // alle Parameter (keys)
-        Enumeration<String> paramNames = request.getParameterNames();
-
         Map<String, String[]> params = request.getParameterMap();
 
         
@@ -57,13 +54,9 @@ public class SongsServlet extends HttpServlet {
             sendResponse(400, Constants.BAD_PARAMS, response);
         }
 
+            if (request.getParameterMap().containsKey(Constants.SEARCH_PARAM)) {
 
-
-
-            if (request.getParameterMap().containsKey("songId")) {
-                log.info(params.get("songId"));
-
-                String[] peep = params.get("songId");
+                String[] peep = params.get(Constants.SEARCH_PARAM);
                 
                 if (peep == null || peep.length != 1) {
                     throw new IllegalArgumentException(Constants.BAD_PARAMS);

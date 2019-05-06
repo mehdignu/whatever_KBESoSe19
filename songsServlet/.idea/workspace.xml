@@ -7,27 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e32745f9-68cd-42e2-b9c7-d91572c22d40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsServlet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/songsServlet.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/DataStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/DataStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/utils/JSONHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/utils/JSONHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/utils/XMLHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/DataHandler/utils/XMLHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/SongsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/SongsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/pojo/Songs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/servlet/pojo/Songs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/META-INF/songsServlet.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/DataStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/DataStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/utils/JSONHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/utils/JSONHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/utils/XMLHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/DataHandler/utils/XMLHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/SongsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/SongsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/pojo/Songs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/classes/de/htw/ai/kbe/servlet/pojo/Songs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/echoServlet/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/echoServlet/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+            <state relative-caret-position="58">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="41" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="41" />
+            <state relative-caret-position="68">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -270,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557154678810" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557154844222" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jaxbJacksonExamples" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -379,18 +361,18 @@
       <option name="presentableId" value="Default" />
       <updated>1556610917396</updated>
       <workItem from="1556610918643" duration="4207000" />
-      <workItem from="1557150644086" duration="4025000" />
+      <workItem from="1557150644086" duration="4191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8232000" />
+    <option name="totallyTimeSpent" value="8398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18926397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18926397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -400,7 +382,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -486,15 +468,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/DataHandler/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="41" />
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/servlet/SongsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+        <state relative-caret-position="58">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
