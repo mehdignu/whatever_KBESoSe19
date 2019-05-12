@@ -2,6 +2,7 @@ package de.htw.ai.kbe.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import de.htw.ai.kbe.servlet.DataHandler.DataStore;
 import de.htw.ai.kbe.servlet.pojo.Song;
 import org.apache.commons.io.IOUtils;
@@ -88,7 +90,7 @@ public class SongsServlet extends HttpServlet {
                 throw new IllegalArgumentException(Constants.BAD_PARAMS);
             }
 
-            sendResponse(200, "this is your song id = " + id, response);
+            getSongById(response, accepts, id);
 
         } else {
 
@@ -98,8 +100,27 @@ public class SongsServlet extends HttpServlet {
 
             //return all songs back
             sendResponse(200, accepts, dataSource.getAllSongs(), response);
+
         }
 
+    }
+
+    /**
+     * get back the required song from specific id
+     * @param response
+     * @param accepts
+     * @param id
+     * @throws IOException
+     */
+    private void getSongById(HttpServletResponse response, String accepts, int id) throws IOException {
+
+        Song song = dataSource.getSong(id);
+
+        if(song != null){
+            sendResponse(200, accepts, Arrays.asList(song), response);
+        } else {
+            sendResponse(404, "Song with id "+ id + " not found", response);
+        }
 
     }
 
@@ -124,10 +145,15 @@ public class SongsServlet extends HttpServlet {
      * @throws IOException
      */
     private void sendResponse(int code, String contentType, List<Song> songsDelivery, HttpServletResponse response) throws IOException {
+
         response.setContentType(contentType);
         response.setStatus(code);
-        try (PrintWriter out = response.getWriter()) {
-            out.println("boo");
+
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(response.getOutputStream(), songsDelivery);
+        } catch (Exception e) {
+            String msg = "Failed to write Songs to stream. " + e.getMessage();
         }
     }
 

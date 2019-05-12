@@ -35,7 +35,6 @@ public class DataStore {
      */
     public void loadSongs(String dataPath) throws IOException {
 
-
         try {
 
             List<Song> readSongs = readXMLToSongs(dataPath);
@@ -48,7 +47,6 @@ public class DataStore {
         }
 
     }
-
 
     // Reads a list of songs from an XML-file into a Songs object
     private static List<Song> readXMLToSongs(String filename)
@@ -69,6 +67,10 @@ public class DataStore {
 
     public synchronized List<Song> getAllSongs() {
         return new ArrayList<>(songs.values());
+    }
+
+    public synchronized Song getSong(int id) {
+        return songs.get(id);
     }
 
 }
