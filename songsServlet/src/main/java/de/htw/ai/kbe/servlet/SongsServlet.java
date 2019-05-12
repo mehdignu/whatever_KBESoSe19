@@ -3,6 +3,9 @@ package de.htw.ai.kbe.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -14,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
+
 
 public class SongsServlet extends HttpServlet {
 
@@ -39,21 +44,45 @@ public class SongsServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws IOException {
 
-        // alle Parameter (keys)
-        Enumeration<String> paramNames = request.getParameterNames();
+        Map<String, String[]> params = request.getParameterMap();
 
-        if (paramNames.hasMoreElements()) {
+        
+        String urlPath = request.getPathInfo();
 
-            if (!request.getParameterMap().containsKey("songId")) {
-                sendResponse(400, "go away you", response);
-            } else {
-                //send back the wanted song
-                sendResponse(200, "the wanted song", response);
-            }
-        } else {
-            //check if the request have no parameters -> send all songs back
-            sendResponse(200, "all the songs", response);
+        //verify the called URL
+        if(!((urlPath.substring(urlPath.lastIndexOf("/") + 1)).equals("songsServlet")) || urlPath.lastIndexOf("/") != 0){
+            sendResponse(400, Constants.BAD_PARAMS, response);
         }
+
+            if (request.getParameterMap().containsKey(Constants.SEARCH_PARAM)) {
+
+                String[] peep = params.get(Constants.SEARCH_PARAM);
+                
+                if (peep == null || peep.length != 1) {
+                    throw new IllegalArgumentException(Constants.BAD_PARAMS);
+                }
+
+                int id = -1;
+
+                try {
+                     id = Integer.parseInt(peep[0]);
+
+                } catch (NumberFormatException e) {
+                    throw new IllegalArgumentException(Constants.BAD_PARAMS);
+                }
+
+                sendResponse(200, "this is your song id = " + id, response);
+
+            } else {
+
+                //check if the url is valid
+                if(!request.getParameterMap().isEmpty())
+                    sendResponse(400, Constants.BAD_PARAMS, response);
+
+                //return all songs back
+                sendResponse(200, "all songs", response);
+            }
+
 
     }
 
