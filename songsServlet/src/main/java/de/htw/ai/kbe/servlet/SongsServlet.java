@@ -81,6 +81,7 @@ public class SongsServlet extends HttpServlet {
                 throw new IllegalArgumentException(Constants.BAD_PARAMS);
             }
 
+            //get song ID
             int id = -1;
 
             try {
@@ -90,6 +91,7 @@ public class SongsServlet extends HttpServlet {
                 throw new IllegalArgumentException(Constants.BAD_PARAMS);
             }
 
+            //find the song by id, if found return it
             getSongById(response, accepts, id);
 
         } else {
@@ -153,7 +155,7 @@ public class SongsServlet extends HttpServlet {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writeValue(response.getOutputStream(), songsDelivery);
         } catch (Exception e) {
-            String msg = "Failed to write Songs to stream. " + e.getMessage();
+            log.info(e.getMessage());
         }
     }
 
@@ -174,6 +176,11 @@ public class SongsServlet extends HttpServlet {
     }
 
 
+    /**
+     * extract the accept headers and check it's validity
+     * @param request
+     * @return
+     */
     private String readAcceptHeader(HttpServletRequest request) {
 
         //extract accept headers
