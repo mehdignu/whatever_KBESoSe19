@@ -1,26 +1,19 @@
 package de.htw.ai.kbe.servlet.pojo;
 
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "song")
-public class Songs {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
+public class Song {
 
     private Integer id;
     private String title;
     private String artist;
     private String album;
     private Integer released;
-
-    public Songs() {
-    }
-
-    public Songs(Integer id, String title, String artist, String album, Integer released) {
-        this.id = id;
-        this.title = title;
-        this.artist = artist;
-        this.album = album;
-        this.released = released;
-    }
 
     public Integer getId() {
         return id;
@@ -64,7 +57,12 @@ public class Songs {
 
     @Override
     public String toString() {
-        return "OurSong [id=" + id + ", title=" + title + ", artist=" + artist + ", album=" + album + ", released="
-                + released + "]";
+        return "Song{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", album='" + album + '\'' +
+                ", released=" + released +
+                '}';
     }
 }
