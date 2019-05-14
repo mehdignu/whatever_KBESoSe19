@@ -57,10 +57,12 @@ public class SongsServlet extends HttpServlet {
         //get the full url
         String urlPath = request.getPathInfo();
 
+        log.info(urlPath);
+
         //verify the called URL
-        if (!((urlPath.substring(urlPath.lastIndexOf("/") + 1)).equals("songsServlet")) || urlPath.lastIndexOf("/") != 0) {
-            sendResponse(400, Constants.BAD_PARAMS, response);
-        }
+//        if (!((urlPath.substring(urlPath.lastIndexOf("/") + 1)).equals("songsServlet")) || urlPath.lastIndexOf("/") != 0) {
+//            sendResponse(400, Constants.BAD_PARAMS, response);
+//        }
 
         //get the accept headers
         String accepts = null;
