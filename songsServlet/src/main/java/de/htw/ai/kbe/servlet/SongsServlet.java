@@ -54,9 +54,6 @@ public class SongsServlet extends HttpServlet {
         //get the url params and save them in a map
         Map<String, String[]> params = request.getParameterMap();
 
-        //get the full url
-        String urlPath = request.getPathInfo();
-
         //get the accept headers
         String accepts = null;
         try {
