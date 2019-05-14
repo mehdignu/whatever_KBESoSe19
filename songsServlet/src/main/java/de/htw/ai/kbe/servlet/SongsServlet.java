@@ -3,11 +3,11 @@ package de.htw.ai.kbe.servlet;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.htw.ai.kbe.servlet.DataHandler.DataStore;
 import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
-import de.htw.ai.kbe.servlet.DataHandler.utils.Status;
 import de.htw.ai.kbe.servlet.pojo.Song;
 import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
+import org.json.XML;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -157,12 +157,36 @@ public class SongsServlet extends HttpServlet {
             response.getOutputStream().flush();
         }
          */
+        String xml_data = "";
 
         String payloadRequest = getBody(request);
 
+        System.out.println("Hier die gelesene JSON-Daten");
         System.out.println(payloadRequest);
+
+        try {
+            JSONObject obj;
+            obj = new JSONObject(payloadRequest);
+            xml_data = XML.toString(obj);
+        } catch(Exception e) {
+            System.out.println("Hier Catch-Error");
+            System.out.println(e);
+        }
+
+        //converting json to xml
+
+
+        System.out.println("Hier die XML Form");
+        System.out.println(xml_data);
+
     }
 
+    /**
+     * Hier wird body von JSON Objekt in ein String gelesen
+     * @param request
+     * @return
+     * @throws IOException
+     */
     public static String getBody(HttpServletRequest request) throws IOException {
 
         String body = null;
