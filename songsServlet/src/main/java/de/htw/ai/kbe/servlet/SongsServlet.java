@@ -46,7 +46,6 @@ public class SongsServlet extends HttpServlet {
 
         Map<String, String[]> params = request.getParameterMap();
 
-        
         String urlPath = request.getPathInfo();
 
         //verify the called URL
@@ -76,7 +75,6 @@ public class SongsServlet extends HttpServlet {
             } else {
                 sendResponse(400, Constants.BAD_PARAMS, response);
             }
-
 
     }
 
