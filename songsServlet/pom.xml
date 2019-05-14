@@ -5,7 +5,7 @@
   <artifactId>songsServlet</artifactId>
   <packaging>war</packaging>
   <version>0.0.1</version>
-  <name>echoServlet</name>
+  <name>songsServlet</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -80,7 +80,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>echoServlet</finalName>
+    <finalName>songsServlet</finalName>
     <plugins>
 
       <plugin>

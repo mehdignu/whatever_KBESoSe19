@@ -1,26 +1,24 @@
 package de.htw.ai.kbe.servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import de.htw.ai.kbe.servlet.DataHandler.DataStore;
+import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
+import de.htw.ai.kbe.servlet.DataHandler.utils.Status;
+import de.htw.ai.kbe.servlet.pojo.Song;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import de.htw.ai.kbe.servlet.DataHandler.DataStore;
-import de.htw.ai.kbe.servlet.pojo.Song;
-import org.apache.commons.io.IOUtils;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
-
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class SongsServlet extends HttpServlet {
 
@@ -47,6 +45,7 @@ public class SongsServlet extends HttpServlet {
         }
 
     }
+
 
     @Override
     public void doGet(HttpServletRequest request,
@@ -128,14 +127,83 @@ public class SongsServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        /**
         response.setContentType("text/plain");
         ServletInputStream inputStream = request.getInputStream();
         byte[] inBytes = IOUtils.toByteArray(inputStream);
         try (PrintWriter out = response.getWriter()) {
             out.println(new String(inBytes));
+        }*/
+
+        response.setContentType("application/json");
+
+        /**
+        Gson gson = new Gson();
+        try {
+            StringBuilder sb = new StringBuilder();
+            String s;
+            while ((s = request.getReader().readLine()) != null) {
+                sb.append(s);
+            }
+
+            Song newSong = (Song) gson.fromJson(sb.toString(), Song.class);
+
+            Status status = new Status();
+
+            status.setSuccess(true);
+
+            response.getOutputStream().print(gson.toJson(status));
+            response.getOutputStream().flush();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Status status = new Status();
+            status.setSuccess(false);
+            status.setDescription(ex.getMessage());
+            response.getOutputStream().print(gson.toJson(status));
+            response.getOutputStream().flush();
         }
+         */
+
+        String payloadRequest = getBody(request);
+
+        System.out.println(payloadRequest);
     }
 
+    public static String getBody(HttpServletRequest request) throws IOException {
+
+        String body = null;
+        StringBuilder stringBuilder = new StringBuilder();
+        BufferedReader bufferedReader = null;
+
+        try {
+            InputStream inputStream = request.getInputStream();
+            if (inputStream != null) {
+                bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                char[] charBuffer = new char[128];
+                int bytesRead = -1;
+                while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+                    stringBuilder.append(charBuffer, 0, bytesRead);
+                }
+            } else {
+                stringBuilder.append("");
+            }
+        } catch (IOException ex) {
+            throw ex;
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException ex) {
+                    throw ex;
+                }
+            }
+        }
+
+        body = stringBuilder.toString();
+        return body;
+    }
 
     /**
      * response that handles the songs delivery
@@ -146,7 +214,7 @@ public class SongsServlet extends HttpServlet {
      * @param response
      * @throws IOException
      */
-    private void sendResponse(int code, String contentType, List<Song> songsDelivery, HttpServletResponse response) throws IOException {
+    private void sendResponse(int code, String contentType, List<Song> songsDelivery, HttpServletResponse response)  {
 
         response.setContentType(contentType);
         response.setStatus(code);
@@ -168,6 +236,7 @@ public class SongsServlet extends HttpServlet {
      * @throws IOException
      */
     private void sendResponse(int code, String msg, HttpServletResponse response) throws IOException {
+
         response.setContentType(Constants.TEXT_TYPE);
         response.setStatus(code);
         try (PrintWriter out = response.getWriter()) {
