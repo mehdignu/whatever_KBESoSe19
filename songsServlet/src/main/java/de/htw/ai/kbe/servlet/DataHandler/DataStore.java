@@ -64,12 +64,27 @@ public class DataStore {
         }
     }
 
-    public synchronized void saveSongs() throws IOException {
+ public synchronized void saveSongs() throws IOException {
+
         try (OutputStream os = new BufferedOutputStream(new FileOutputStream(filePath))) {
-            //TODO - save json songs to xml file
+            Songs songsWrapper = new Songs();
+            songsWrapper.setSongList((List<Song>) songs);
+
+            try {
+                JAXBContext context = JAXBContext.newInstance(Songs.class);
+                Marshaller marshaller = context.createMarshaller();
+                marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+                marshaller.marshal(songsWrapper, os);
+                os.flush();
+                os.close();
+            } catch (Exception e) {
+                throw new IOException("failed to save songs");
+            }
+
         } catch (IOException e) {
             throw new IOException(e.getMessage());
         }
+
     }
 
     /**
