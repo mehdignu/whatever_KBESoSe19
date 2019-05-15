@@ -100,6 +100,7 @@ public class SongsServlet extends HttpServlet {
 
     /**
      * get back the required song from specific id
+     *
      * @param response
      * @param accepts
      * @param id
@@ -109,10 +110,10 @@ public class SongsServlet extends HttpServlet {
 
         Song song = dataSource.getSong(id);
 
-        if(song != null){
+        if (song != null) {
             sendResponse(200, accepts, Arrays.asList(song), response);
         } else {
-            sendResponse(404, "Song with id "+ id + " not found", response);
+            sendResponse(404, "Song with id " + id + " not found", response);
         }
 
     }
@@ -120,105 +121,30 @@ public class SongsServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        /**
-        response.setContentType("text/plain");
-        ServletInputStream inputStream = request.getInputStream();
-        byte[] inBytes = IOUtils.toByteArray(inputStream);
-        try (PrintWriter out = response.getWriter()) {
-            out.println(new String(inBytes));
-        }*/
+        //get request content type
+        String contentType = request.getHeader("Content-Type");
 
-        response.setContentType("application/json");
+        Song song = DataStore.readJSONToSongs(request.getInputStream());
 
-        /**
-        Gson gson = new Gson();
-        try {
-            StringBuilder sb = new StringBuilder();
-            String s;
-            while ((s = request.getReader().readLine()) != null) {
-                sb.append(s);
-            }
+        song = dataSource.addSong(song);
 
-            Song newSong = (Song) gson.fromJson(sb.toString(), Song.class);
+        if (contentType == null || !contentType.equals(Constants.JSON_TYPE))
+            sendResponse(400, "could not save song !", response);
 
-            Status status = new Status();
-
-            status.setSuccess(true);
-
-            response.getOutputStream().print(gson.toJson(status));
-            response.getOutputStream().flush();
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            Status status = new Status();
-            status.setSuccess(false);
-            status.setDescription(ex.getMessage());
-            response.getOutputStream().print(gson.toJson(status));
-            response.getOutputStream().flush();
-        }
-         */
-        String xml_data = "";
-
-        String payloadRequest = getBody(request);
-
-        System.out.println("Hier die gelesene JSON-Daten");
-        System.out.println(payloadRequest);
-
-        try {
-            JSONObject obj;
-            obj = new JSONObject(payloadRequest);
-            xml_data = XML.toString(obj);
-        } catch(Exception e) {
-            System.out.println("Hier Catch-Error");
-            System.out.println(e);
-        }
-
-        //converting json to xml
-
-
-        System.out.println("Hier die XML Form");
-        System.out.println(xml_data);
+        sendResponse(200, "song saved under ID :" + song.getId(), response);
 
     }
 
-    /**
-     * Hier wird body von JSON Objekt in ein String gelesen
-     * @param request
-     * @return
-     * @throws IOException
-     */
-    public static String getBody(HttpServletRequest request) throws IOException {
 
-        String body = null;
-        StringBuilder stringBuilder = new StringBuilder();
-        BufferedReader bufferedReader = null;
-
+    @Override
+    public void destroy() {
         try {
-            InputStream inputStream = request.getInputStream();
-            if (inputStream != null) {
-                bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                char[] charBuffer = new char[128];
-                int bytesRead = -1;
-                while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
-                    stringBuilder.append(charBuffer, 0, bytesRead);
-                }
-            } else {
-                stringBuilder.append("");
-            }
-        } catch (IOException ex) {
-            throw ex;
-        } finally {
-            if (bufferedReader != null) {
-                try {
-                    bufferedReader.close();
-                } catch (IOException ex) {
-                    throw ex;
-                }
-            }
+            this.dataSource.saveSongs();
+        } catch (IOException e) {
+            log.fatal("failed to save songs on destroy");
         }
 
-        body = stringBuilder.toString();
-        return body;
+        super.destroy();
     }
 
     /**
@@ -230,7 +156,7 @@ public class SongsServlet extends HttpServlet {
      * @param response
      * @throws IOException
      */
-    private void sendResponse(int code, String contentType, List<Song> songsDelivery, HttpServletResponse response)  {
+    private void sendResponse(int code, String contentType, List<Song> songsDelivery, HttpServletResponse response) {
 
         response.setContentType(contentType);
         response.setStatus(code);
@@ -263,6 +189,7 @@ public class SongsServlet extends HttpServlet {
 
     /**
      * extract the accept headers and check it's validity
+     *
      * @param request
      * @return
      */

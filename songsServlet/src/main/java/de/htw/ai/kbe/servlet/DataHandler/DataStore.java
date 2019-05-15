@@ -1,20 +1,18 @@
 package de.htw.ai.kbe.servlet.DataHandler;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import de.htw.ai.kbe.servlet.pojo.Song;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -23,6 +21,8 @@ public class DataStore {
 
 
     private Map<Integer, Song> songs;
+    private static int latestID;
+    private static String filePath;
 
     public DataStore() {
         this.songs = new HashMap<>();
@@ -30,6 +30,7 @@ public class DataStore {
 
     /**
      * loads all songs from the data path and save them
+     *
      * @param dataPath
      * @throws IOException
      */
@@ -37,15 +38,49 @@ public class DataStore {
 
         try {
 
+            filePath = dataPath;
             List<Song> readSongs = readXMLToSongs(dataPath);
 
             //save all the songs along with their id's
             this.songs = readSongs.stream().collect(Collectors.toMap(Song::getId, Function.identity()));
 
+            //gte the latest id
+            latestID = songs.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+
+
+    @SuppressWarnings("unchecked")
+    public static Song readJSONToSongs(InputStream is) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return (Song) objectMapper.readValue(is, new TypeReference<Song>() {
+            });
+        } catch (Exception e) {
+            throw new IOException("could not read song from stream");
+        }
+    }
+
+    public synchronized void saveSongs() throws IOException {
+        try (OutputStream os = new BufferedOutputStream(new FileOutputStream(filePath))) {
+            //TODO - save json songs to xml file
+        } catch (IOException e) {
+            throw new IOException(e.getMessage());
+        }
+    }
+
+    /**
+     * adds the song to the store
+     * @param song
+     * @return
+     */
+    public synchronized Song addSong(Song song) {
+        song.setId(latestID++);
+        this.songs.put(song.getId(), song);
+        return song;
     }
 
     // Reads a list of songs from an XML-file into a Songs object
