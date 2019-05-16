@@ -3,9 +3,11 @@ package de.htw.ai.kbe.servlet.DataHandler;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.htw.ai.kbe.servlet.pojo.Song;
+import de.htw.ai.kbe.servlet.pojo.Songs;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
