@@ -4,8 +4,6 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import de.htw.ai.kbe.bean.Song;
-
 public class InMemorySongCollection {
 
     private static InMemorySongCollection instance = null;
@@ -66,6 +64,7 @@ public class InMemorySongCollection {
     public Collection<Song> getAllSongs() {
         return storage.values();
     }
+
 
     public Integer addSong(Song song) {
         song.setId((int) storage.keySet().stream().count() + 1);
