@@ -15,19 +15,30 @@ public class SongsResource {
 
     private InMemorySongCollection songsList = InMemorySongCollection.getInstance();
 
-    //Bsp:      GET http://localhost:8080/songsWS/rest/songs
+    /**
+     * Bsp:      GET http://localhost:8080/songsWS/rest/songs
+     *
+     * @return json
+     */
     @GET
-    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Produces({MediaType.APPLICATION_JSON})
     public Collection<Song> getAllSongs() {
         System.out.println("getAllSong: Returning all songs!");
         return songsList.getAllSongs();
     }
 
-    //Bsp:      GET http://localhost:8080/songsWS/rest/songs/1
-    //Returns:  200 & contact with id 1 or 404 when id not found,
+    //
+
+    /**
+     * Bsp:      GET http://localhost:8080/songsWS/rest/songs/1
+     * Returns:  200 & contact with id 1 or 404 when id not found
+     *
+     * @param id
+     * @return xml
+     */
     @GET
     @Path("/{id}")
-    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    @Produces({MediaType.APPLICATION_XML})
     public Response getSong(@PathParam("id") Integer id) {
         Song song = songsList.getSong(id);
         if (song != null) {
@@ -38,24 +49,19 @@ public class SongsResource {
         }
     }
 
-    //Returns: 200 and 204 on provided id not found
-//	@GET
-//  @Path("/{id}")
-//  @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-//	public Contact getContact(@PathParam("id") Integer id) {
-//        return addressBook.getContact(id);
-//    }
-
-
-    //  POST http://localhost:8080/contactsJAXRS/rest/contacts with contact in payload
-//  Status Code 201 und URI fuer den neuen Eintrag im http-header 'Location' zurueckschicken, also:
-//  Location: /contactsJAXRS/rest/contacts/neueID
-
+    //get the absolute path
     @Context
     UriInfo uriInfo;
 
+    /**
+     * POST http://localhost:8080/songsWS/rest/songs with song in payload
+     *
+     * @param song Content-Type:application/xml (mit einer XML-Payload) || (mit einer JSON-Payload)
+     * @return xml - trägt den Song in der DB ein. Falls erfolgreich, dann Status-Code 201 und liefert die URL für den neuen Song
+     * im “Location”-Header an den Client zurück
+     */
     @POST
-    @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response createSong(Song song) {
         Integer newId = songsList.addSong(song);
@@ -63,5 +69,36 @@ public class SongsResource {
         uriBuilder.path(Integer.toString(newId));
         return Response.created(uriBuilder.build()).build();
     }
+
+    /**
+     *
+     * @param id
+     * @param song Content-Type: application/xml (mit einer XML-Payload) || (mit einer JSON-Payload)
+     * @return - erneuert den Eintrag für songId  x in der DB und schickt “on Success” den HTTP-Statuscode 204, Body ist leer.
+     *
+     */
+    @PUT
+    @Path("/{id}")
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updateSong(@PathParam("id") Integer id, Song song ) {
+        //noch nicht implemented
+        return null;
+    }
+
+    /**
+     *
+     * @param id
+     * @return löscht den Eintrag für Id x in der DB und schickt on Success einen HTTP-Statuscode 204, Body ist leer.
+     *
+     */
+    @DELETE
+    @Path("/{id}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response deleteSong(@PathParam("id") Integer id) {
+        //noch nicht implemented
+        return null;
+    }
+
 
 }
