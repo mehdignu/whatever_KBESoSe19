@@ -74,11 +74,13 @@ public class InMemorySongCollection {
 
     // updates a contact in the db
     public boolean updateSong(Song song) {
-        throw new UnsupportedOperationException("updateSong: not yet implemented");
+        return false;
     }
 
     // returns deleted contact
     public Song deleteSong(Integer id) {
-        throw new UnsupportedOperationException("deleteSong: not yet implemented");
+        Song song = getSong(id);
+        storage.remove(id);
+        return song;
     }
 }

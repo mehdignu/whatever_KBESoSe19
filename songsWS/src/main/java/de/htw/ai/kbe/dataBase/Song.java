@@ -3,7 +3,7 @@ package de.htw.ai.kbe.dataBase;
 import javax.persistence.*;
 
 @Entity
-@Table(name="song")
+@Table(name = "song")
 public class Song {
 
     private int id;

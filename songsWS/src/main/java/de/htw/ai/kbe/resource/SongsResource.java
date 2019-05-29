@@ -33,7 +33,7 @@ public class SongsResource {
      * Bsp:      GET http://localhost:8080/songsWS/rest/songs/1
      * Returns:  200 & contact with id 1 or 404 when id not found
      *
-     * @param id
+     * @param id eingegeben in addressbar
      * @return xml
      */
     @GET
@@ -72,7 +72,7 @@ public class SongsResource {
 
     /**
      *
-     * @param id
+     * @param id eingegeben in Postman/Kommandopfad
      * @param song Content-Type: application/xml (mit einer XML-Payload) || (mit einer JSON-Payload)
      * @return - erneuert den Eintrag für songId  x in der DB und schickt “on Success” den HTTP-Statuscode 204, Body ist leer.
      *
@@ -82,22 +82,30 @@ public class SongsResource {
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateSong(@PathParam("id") Integer id, Song song ) {
+
         //noch nicht implemented
         return null;
     }
 
     /**
      *
-     * @param id
+     * @param id eingegeben in Postman/Kommandopfad
      * @return löscht den Eintrag für Id x in der DB und schickt on Success einen HTTP-Statuscode 204, Body ist leer.
+     *          falls Id nicht gefunden return mit HTTP-Statuscode 404
      *
      */
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteSong(@PathParam("id") Integer id) {
-        //noch nicht implemented
-        return null;
+        Song song = songsList.getSong(id);
+        if (song != null) {
+            System.out.println("deleteSong: deleting song for id " + id);
+            songsList.deleteSong(id);
+            return Response.status(Response.Status.NO_CONTENT).entity("").build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
+        }
     }
 
 
