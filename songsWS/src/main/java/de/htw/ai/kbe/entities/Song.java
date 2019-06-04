@@ -2,13 +2,17 @@ package de.htw.ai.kbe.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 @Entity
+
+@XmlRootElement
 @Table(name = "song")
 public class Song {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
     private Integer songId;
 
@@ -40,6 +44,7 @@ public class Song {
     public Integer getReleased() {
         return released;
     }
+
 
     public void setSongId(Integer songId) {
         this.songId = songId;

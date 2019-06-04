@@ -8,7 +8,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-
 public abstract class ManageResource<T> {
 
     protected abstract List getListOfRecords();
@@ -21,7 +20,6 @@ public abstract class ManageResource<T> {
 
     protected abstract Response updateSingleRecord(Integer id, T t);
 
-
     // entspricht <persistence-unit name="songDB-PU" transaction-type="RESOURCE_LOCAL"> in persistence.xml
     private static final String PERSISTENCE_UNIT_NAME = "songDB-PU";
 
@@ -29,6 +27,7 @@ public abstract class ManageResource<T> {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         return emf.createEntityManager();
     }
+
 
     /**
      * Bsp:      GET http://localhost:8080/songsWS/rest/songs
