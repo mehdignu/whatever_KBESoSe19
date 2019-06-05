@@ -4,15 +4,17 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 
 @Entity
 
 @XmlRootElement
-@Table(name = "song")
+@Table(name = "songsService")
 public class Song {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = IDENTITY)
     @NotNull
     private Integer songId;
 

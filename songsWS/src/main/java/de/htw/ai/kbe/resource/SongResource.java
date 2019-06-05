@@ -1,7 +1,6 @@
 package de.htw.ai.kbe.resource;
 
 import de.htw.ai.kbe.entities.Song;
-import de.htw.ai.kbe.xmlHandler.XMLConverter;
 
 import javax.naming.NamingException;
 import javax.persistence.EntityManager;
