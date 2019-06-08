@@ -21,8 +21,10 @@ import java.security.Key;
 @Path("/auth")
 public class AuthenticationEndpoint {
 
-    private EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("songDB-PU");
+    private EntityManagerFactory emfactory = Persistence.createEntityManagerFactory(Constants.PERS_UNIT_NAME);
     private EntityManager entitymanager = emfactory.createEntityManager();
+
+    protected static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -37,26 +39,25 @@ public class AuthenticationEndpoint {
             authenticate(userID, password);
 
             // Issue a token for the user
-            String token = issueToken(userID);
+            String token = issueToken();
 
             // Return the token on the response
-            return Response.ok(token).build();
+            return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();
 
         } catch (Exception e) {
+
             return Response.status(Response.Status.FORBIDDEN).build();
         }
     }
 
 
 
-    private String issueToken(String userID) {
+    private String issueToken() {
         // Issue a token (can be a random String persisted to a database or a JWT token)
         // The issued token must be associated to a user
         // Return the issued token
 
-        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-
-        return Jwts.builder().setSubject(userID).signWith(key).compact();
+        return Jwts.builder().setSubject("Songs-WS").signWith(key).compact();
     }
 
 
@@ -82,7 +83,8 @@ public class AuthenticationEndpoint {
                 = criteriaBuilder.and(predicateForUserID, predicateForPass);
         criteriaQuery.where(finalPredicate);
 
-       if( entitymanager.createQuery(criteriaQuery).getResultList().size() != 1)
+
+        if( entitymanager.createQuery(criteriaQuery).getResultList().size() != 1)
            throw new AuthenticationException("User does not exists in the database");
 
     }

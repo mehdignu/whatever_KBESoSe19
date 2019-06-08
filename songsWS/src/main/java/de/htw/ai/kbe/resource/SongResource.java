@@ -12,6 +12,7 @@ import java.util.List;
 /**
  * Root resource (exposed at "songs" path)
  */
+@Secured
 @Path("/songs")
 public class SongResource extends ManageResource<Song> {
 

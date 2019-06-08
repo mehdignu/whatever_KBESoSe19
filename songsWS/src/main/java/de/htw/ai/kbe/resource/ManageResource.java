@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+@Secured
 public abstract class ManageResource<T> {
 
     protected abstract List getListOfRecords();
@@ -21,7 +22,7 @@ public abstract class ManageResource<T> {
     protected abstract Response updateSingleRecord(Integer id, T t);
 
     // entspricht <persistence-unit name="songDB-PU" transaction-type="RESOURCE_LOCAL"> in persistence.xml
-    private static final String PERSISTENCE_UNIT_NAME = "songDB-PU";
+    private static final String PERSISTENCE_UNIT_NAME = Constants.PERS_UNIT_NAME;
 
     protected EntityManager getEntityManager() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
@@ -34,7 +35,6 @@ public abstract class ManageResource<T> {
      *
      * @return json
      */
-    @Secured
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<T> getAllRecords() {
