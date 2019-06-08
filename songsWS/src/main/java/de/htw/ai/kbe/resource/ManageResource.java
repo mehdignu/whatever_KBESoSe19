@@ -34,6 +34,7 @@ public abstract class ManageResource<T> {
      *
      * @return json
      */
+    @Secured
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<T> getAllRecords() {
