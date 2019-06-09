@@ -1,5 +1,6 @@
 package de.htw.ai.kbe.resource;
 
+import de.htw.ai.kbe.PermissionController.Secured;
 import de.htw.ai.kbe.entities.Song;
 import de.htw.ai.kbe.interfaces.ManageResource;
 import de.htw.ai.kbe.persistence.PersistenceService;
