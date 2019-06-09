@@ -1,12 +1,12 @@
 package de.htw.ai.kbe.resource;
 
 import de.htw.ai.kbe.entities.Song;
+import de.htw.ai.kbe.interfaces.ManageResource;
+import de.htw.ai.kbe.persistence.PersistenceService;
 
-import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.*;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -14,8 +14,9 @@ import java.util.List;
  */
 @Secured
 @Path("/songs")
-public class SongResource extends ManageResource<Song> {
+public class SongResource implements ManageResource<Song> {
 
+    private PersistenceService persIns = new PersistenceService();
     protected EntityManager em;
     private List<Song> songsList;
     private Song song;
@@ -29,9 +30,9 @@ public class SongResource extends ManageResource<Song> {
      * @return
      */
     @Override
-    protected List<Song> getListOfRecords() {
+    public List<Song> getAllRecords() {
         System.out.println("getAllSong: Returning all songs!");
-        em = getEntityManager();
+        em = persIns.getEntityManager();
         em.getTransaction().begin();
         songsList = em.createQuery("SELECT e FROM Song e").getResultList();
         em.getTransaction().commit();
@@ -44,9 +45,9 @@ public class SongResource extends ManageResource<Song> {
      * @return
      */
     @Override
-    protected Response getSingleRecord(Integer id) {
+    public Response getSingleRowRecord(Integer id) {
         song = new Song();
-        em = getEntityManager();
+        em = persIns.getEntityManager();
         em.getTransaction().begin();
         song = em.find(Song.class, id);
         if (song != null) {    //wie ist die richtige Bedingung?
@@ -65,11 +66,11 @@ public class SongResource extends ManageResource<Song> {
      * @return
      */
     @Override
-    protected Response createSingleRecord(Song t) {
+    public Response createRecord(Song t) {
         song = new Song();
         try {
             System.out.println("Trying to post/insert new Song in DB");
-            em = getEntityManager();
+            em = persIns.getEntityManager();
             em.getTransaction().begin();
             setRecordDetails(t);
             em.persist(song);
@@ -92,9 +93,9 @@ public class SongResource extends ManageResource<Song> {
      * @return
      */
     @Override
-    protected Response deleteSingleRecord(Integer id) {
+    public Response deleteRecord(Integer id) {
         song = new Song();
-        em = getEntityManager();
+        em = persIns.getEntityManager();
         em.getTransaction().begin();
         song = em.find(Song.class, id);
         if (song != null) {
@@ -116,10 +117,10 @@ public class SongResource extends ManageResource<Song> {
      * @throws Exception
      */
     @Override
-    protected Response updateSingleRecord(Integer id, Song t) {
+    public Response updateRecord(Integer id, Song t) {
         song = new Song();
         try {
-            em = getEntityManager();
+            em = persIns.getEntityManager();
             em.getTransaction().begin();
             song = em.find(Song.class, id);
 
@@ -158,4 +159,5 @@ public class SongResource extends ManageResource<Song> {
         song.setAlbum(t.getAlbum());
         song.setReleased(t.getReleased());
     }
+
 }

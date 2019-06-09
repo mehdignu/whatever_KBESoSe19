@@ -58,7 +58,7 @@ public class SongResourceTest {
 
     @Test
     public void findSongByID() {
-        Response song5Response = songResource.getSingleRecord(5);
+        Response song5Response = songResource.getSingleRowRecord(5);
         System.out.println(song5Response);
         Assert.assertEquals(song5Response.getStatus(), 200);
     }
@@ -75,21 +75,21 @@ public class SongResourceTest {
     @Test
     public void putSongWithSameId() {
         songTest.setSongId(5);
-        Response response = songResource.updateSingleRecord(5, songTest);
+        Response response = songResource.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.NO_CONTENT, response.getStatusInfo());
     }
 
     @Test
     public void putSongWithNotSameId() {
         songTest.setSongId(10);
-        Response response = songResource.updateSingleRecord(5, songTest);
+        Response response = songResource.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 
     @Test
     public void putSongWithNonExistanceId() {
         songTest.setSongId(5);
-        Response response = songResource.updateSingleRecord(200, songTest);
+        Response response = songResource.updateRecord(200, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 
