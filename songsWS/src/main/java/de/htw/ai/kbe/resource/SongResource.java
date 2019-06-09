@@ -16,7 +16,7 @@ import java.util.List;
 @Path("/songs")
 public class SongResource extends ManageResource<Song> {
 
-    private EntityManager em;
+    protected EntityManager em;
     private List<Song> songsList;
     private Song song;
     private Response response;
@@ -27,7 +27,6 @@ public class SongResource extends ManageResource<Song> {
 
     /**
      * @return
-     * @throws NamingException
      */
     @Override
     protected List<Song> getListOfRecords() {
@@ -43,7 +42,6 @@ public class SongResource extends ManageResource<Song> {
     /**
      * @param id
      * @return
-     * @throws NamingException
      */
     @Override
     protected Response getSingleRecord(Integer id) {
@@ -65,8 +63,6 @@ public class SongResource extends ManageResource<Song> {
     /**
      * @param t
      * @return
-     * @throws SQLException
-     * @throws NamingException
      */
     @Override
     protected Response createSingleRecord(Song t) {
@@ -94,8 +90,6 @@ public class SongResource extends ManageResource<Song> {
     /**
      * @param id
      * @return
-     * @throws SQLException
-     * @throws NamingException
      */
     @Override
     protected Response deleteSingleRecord(Integer id) {
@@ -119,8 +113,7 @@ public class SongResource extends ManageResource<Song> {
      * @param id
      * @param t
      * @return
-     * @throws SQLException
-     * @throws NamingException
+     * @throws Exception
      */
     @Override
     protected Response updateSingleRecord(Integer id, Song t) {
@@ -129,17 +122,6 @@ public class SongResource extends ManageResource<Song> {
             em = getEntityManager();
             em.getTransaction().begin();
             song = em.find(Song.class, id);
-            System.out.println("This is the payload songId" + t.getSongId());
-            System.out.println("This is the payload title" + t.getTitle());
-            System.out.println("This is the payload artist" + t.getArtist());
-            System.out.println("This is the payload album " + t.getAlbum());
-            System.out.println("This is the payload released date " + t.getReleased());
-            System.out.println("========================================================");
-            System.out.println("This is the DB songId" + song.getSongId());
-            System.out.println("This is the DB title" + song.getTitle());
-            System.out.println("This is the DB artist" + song.getArtist());
-            System.out.println("This is the DB album " + song.getAlbum());
-            System.out.println("This is the DB released date " + song.getReleased());
 
             if (song != null) {
                 if (id == t.getSongId()) {
