@@ -1,0 +1,9 @@
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/Secured.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/Constants.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/entities/User.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/entities/Song.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/SongResource.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java
+/Users/mehdidridi/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java
