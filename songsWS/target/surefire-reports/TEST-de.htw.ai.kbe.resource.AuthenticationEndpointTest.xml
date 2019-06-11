@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="de.htw.ai.kbe.resource.AuthenticationEndpointTest" time="3.792" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="de.htw.ai.kbe.resource.AuthenticationEndpointTest" time="4.094" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
@@ -64,9 +64,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenIdIsWrongShouldReturnForbidden" time="2.439"/>
-  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenUserDoesntExistInTheDatabaseShouldReturnForbidden" time="0.268"/>
-  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenPasswordIsWrongShouldReturnForbidden" time="0.271"/>
-  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenUserExistShouldReturnAccepted" time="0.509"/>
-  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenParametersAreEmptyShouldReturnForbidden" time="0.305"/>
+  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenIdIsWrongShouldReturnForbidden" time="2.774"/>
+  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenUserDoesntExistInTheDatabaseShouldReturnForbidden" time="0.292"/>
+  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenPasswordIsWrongShouldReturnForbidden" time="0.235"/>
+  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenUserExistShouldReturnAccepted" time="0.571"/>
+  <testcase classname="de.htw.ai.kbe.resource.AuthenticationEndpointTest" name="testAuthenticateUserWhenParametersAreEmptyShouldReturnForbidden" time="0.222"/>
 </testsuite>

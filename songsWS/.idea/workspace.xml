@@ -7,13 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b77c7ce-85b8-45e5-a927-5ffd0c719707" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Secured.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/Secured.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/persistence/PersistenceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/persistence/PersistenceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/resource/AuthenticationEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/resource/AuthenticationEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/resource/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/htw/ai/kbe/resource/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,31 +59,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state>
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/AuthenticationEndpointTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="23">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,13 +80,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/Secured.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="582">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="45" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-499">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -115,15 +169,42 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jaxb</find>
-      <find>jaxb-api</find>
-      <find>getEntityManager</find>
-      <find>getE</find>
-      <find>getEn</find>
       <find>PERSISTENCE_UNIT_NAME</find>
       <find>validateToken</find>
       <find>AuthenticationEndpoint</find>
+      <find>&lt;t</find>
+      <find>junit</find>
+      <find>songTest</find>
+      <find>entiti</find>
+      <find>persIns</find>
+      <find>SongResourceTest</find>
+      <find>maven-clean-plugin</find>
+      <find>Persistence</find>
+      <find>plugin</find>
+      <find>test</find>
+      <find>target</find>
+      <find>AfterClass</find>
+      <find>mave</find>
+      <find>scope</find>
+      <find>plugins</find>
+      <find>targ</find>
+      <find>compiler</find>
+      <find>Creating GrizzlyTestContainer configured at the base URI</find>
+      <find>maven</find>
+      <find>SongResource</find>
+      <find>resource</find>
+      <find>packages</find>
+      <find>entit</find>
+      <find>getCriteriaBuilder</find>
+      <find>testAuthenticateUserWhenUserExistShouldReturnAccepted</find>
+      <find>401</find>
+      <find>Unauthorized</find>
     </findStrings>
+    <replaceStrings>
+      <replace>userTest</replace>
+      <replace>403</replace>
+      <replace>Forbidden</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -131,10 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/service/MyResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/MyResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/storage/Song.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/beans.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/storage/InMemorySongCollection.java" />
@@ -169,15 +246,23 @@
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Secured.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpointTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/PermissionController/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/PermissionController/AuthenticationEndpointTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/AuthenticationEndpointTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceJerseyTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java" />
       </list>
     </option>
   </component>
@@ -207,20 +292,13 @@
           <item name="songsWS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="songsWS" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="7" />
-    <option name="y" value="174" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -231,6 +309,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,15 +368,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kbe" type="462c0819:PsiDirectoryNode" />
-              <item name="PermissionController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kbe" type="462c0819:PsiDirectoryNode" />
               <item name="persistence" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -313,13 +383,57 @@
               <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
               <item name="songsWS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,6 +451,9 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.htw.ai.kbe.resource" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\KBE\whatever_KBESoSe19\songsWS\src\main\java\de\htw\ai\kbe\XmlLoader" />
       <recent name="D:\KBE\whatever_KBESoSe19\songsWS\src" />
@@ -361,7 +478,113 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.songsWS">
+    <configuration name="songsWS [test...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+                <option value="-Dtest=AuthenticationEndpointTest" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htw.ai.kbe.resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="de.htw.ai.kbe.PermissionController" />
+      <option name="MAIN_CLASS_NAME" value="de.htw.ai.kbe.resource.AuthenticationEndpointTest" />
+      <option name="METHOD_NAME" value="testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationTest" type="TestNG">
+      <module name="songsWS" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="de.htw.ai.kbe.PermissionController" />
+      <option name="MAIN_CLASS_NAME" value="de.htw.ai.kbe.resource.AuthenticationEndpointTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongResourceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htw.ai.kbe.resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.htw.ai.kbe.resource" />
+      <option name="MAIN_CLASS_NAME" value="de.htw.ai.kbe.resource.SongResourceTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="de.htw.ai.kbe.resource" />
+      <option name="MAIN_CLASS_NAME" value="de.htw.ai.kbe.resource.SongResourceTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="songsWS" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M92" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -435,6 +658,19 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.songsWS [test...]" />
+      <item itemvalue="TestNG.AuthenticationTest" />
+      <item itemvalue="TestNG.SongResourceTest" />
+      <item itemvalue="TestNG.AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" />
+      <item itemvalue="Tomcat Server.songsWS" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" />
+        <item itemvalue="TestNG.SongResourceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -477,6 +713,9 @@
       <workItem from="1559731048628" duration="5910000" />
       <workItem from="1559748203529" duration="7428000" />
       <workItem from="1559986559540" duration="12575000" />
+      <workItem from="1560160051596" duration="596000" />
+      <workItem from="1560162150694" duration="16761000" />
+      <workItem from="1560209117948" duration="3870000" />
     </task>
     <task id="LOCAL-00001" summary="user and song jpaJavaClasses plus needed dependencies in pom plus persistenceDataFile">
       <created>1559136357603</created>
@@ -516,8 +755,40 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AuthenticationEndpointTest_testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted - 2019.06.10 at 16h 55m 38s.xml">
+      <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest_testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted - 2019.06.10 at 16h 58m 01s.xml">
+      <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest_testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted - 2019.06.10 at 17h 07m 15s.xml">
+      <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest_testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted - 2019.06.10 at 17h 07m 38s.xml">
+      <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest_testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted - 2019.06.10 at 17h 07m 55s.xml">
+      <configuration name="AuthenticationEndpointTest.testAuthenticateUserWhenExistInTheDatabaseShouldReturnAccepted" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationTest - 2019.06.10 at 17h 08m 13s.xml">
+      <configuration name="AuthenticationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest - 2019.06.10 at 17h 11m 33s.xml">
+      <configuration name="AuthenticationEndpointTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuthenticationEndpointTest - 2019.06.10 at 17h 11m 50s.xml">
+      <configuration name="AuthenticationEndpointTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuthenticationTest - 2019.06.10 at 17h 13m 04s.xml">
+      <configuration name="AuthenticationTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AuthenticationTest - 2019.06.10 at 17h 14m 35s.xml">
+      <configuration name="AuthenticationTest" configurationId="TestNG" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187771000" />
+    <option name="totallyTimeSpent" value="209875000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,7 +803,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5842217" visible="true" weight="0.18477103" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5842217" visible="true" weight="0.2550586" />
       <window_info id="Structure" order="1" sideWeight="0.29211086" side_tool="true" weight="0.20660147" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -542,17 +813,17 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Persistence" order="8" sideWeight="0.41577825" side_tool="true" weight="0.20660147" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" weight="0.47480404" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.34369886" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884398" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49938875" weight="0.34851485" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34257427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32922733" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32922733" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32772276" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32673267" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50061125" side_tool="true" weight="0.47480404" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.23852183" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.23762377" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Duplicates" order="14" weight="0.32922733" />
@@ -562,7 +833,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24886535" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.16075794" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.21512248" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.26701966" />
@@ -570,45 +841,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83469725" visible="true" weight="0.18003026" />
-      <window_info id="Structure" order="1" sideWeight="0.16530278" side_tool="true" weight="0.17776097" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Persistence" order="8" sideWeight="0.33482644" side_tool="true" weight="0.21882641" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13584287" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41321388" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32922733" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.34042552" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Duplicates" order="14" weight="0.32922733" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="15" weight="0.32922733" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.24076147" />
-      <window_info anchor="bottom" id="Database Console" order="17" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24886535" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.31013617" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.16944024" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -667,60 +899,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/errorhandling/GenericExceptionMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/errorhandling/AppExceptionManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/storage/Song.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/storage/InMemorySongCollection.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar!/org/glassfish/jersey/servlet/ServletContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar!/org/glassfish/jersey/servlet/WebComponent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar!/org/glassfish/jersey/process/internal/RequestScope.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/ApplicationHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="360" selection-start-line="360" selection-end-line="360" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/model/ResourceMethodInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -786,13 +964,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Credentials.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -819,44 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/entities/Song.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-139">
@@ -864,23 +997,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1083">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -894,37 +1010,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/PermissionController/Secured.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Secured.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/PermissionController.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/collections/Lists.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/BaseTestMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="503" selection-start-line="503" selection-end-line="503" />
+          <folding>
+            <element signature="e#15928#15929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="944" selection-start-line="944" selection-end-line="944" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/TestResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#3610#3611#0" expanded="true" />
+            <element signature="e#3646#3647#0" expanded="true" />
+            <element signature="e#3685#3686#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="e#4033#4034#0" expanded="true" />
+            <element signature="e#4081#4082#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/net/AbstractPlainSocketImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/contactsJAXRSSimple 4/src/main/java/de/htw/ai/kbe/services/ContactsWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="73" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceJerseyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1032#1248#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/SongResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/ManageResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-499">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/AuthenticationEndpointTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/htw/ai/kbe/resource/SongResourceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
