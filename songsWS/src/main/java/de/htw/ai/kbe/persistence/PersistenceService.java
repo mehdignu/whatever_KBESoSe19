@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceUnit;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Singleton
 public class PersistenceService {
@@ -22,5 +23,6 @@ public class PersistenceService {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(Constants.PERS_UNIT_NAME);
         return emf.createEntityManager();
     }
+
 
 }

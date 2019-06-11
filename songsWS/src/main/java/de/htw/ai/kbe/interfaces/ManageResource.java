@@ -1,6 +1,6 @@
 package de.htw.ai.kbe.interfaces;
 
-import de.htw.ai.kbe.PermissionController.Secured;
+import de.htw.ai.kbe.resource.Secured;
 
 
 import javax.ws.rs.*;

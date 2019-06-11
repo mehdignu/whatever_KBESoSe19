@@ -1,7 +1,5 @@
 package de.htw.ai.kbe.resource;
 
-import de.htw.ai.kbe.PermissionController.Secured;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

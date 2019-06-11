@@ -1,36 +1,44 @@
 package de.htw.ai.kbe.resource;
 
 import de.htw.ai.kbe.entities.Song;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import de.htw.ai.kbe.entities.User;
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.test.JerseyTest;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.ws.rs.core.Application;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-import static org.testng.Assert.assertNotNull;
+import static org.junit.Assert.assertNotNull;
 
 
-public class SongResourceTest {
+public class SongResourceTest extends JerseyTest {
 
     private static EntityManagerFactory emf;
     private static EntityManager em;
     private static Song songTest;
 
-    private SongResource songResource;
+    private static SongResource songResource;
+
+    @Override
+    protected Application configure() {
+        return new ResourceConfig(SongResource.class);
+    }
+
 
     @BeforeClass
     public static void init() {
-        // using an H2 in-memory database to simulate a real database
+        songResource = new SongResource();
+        songResource.em = em;
         emf = Persistence.createEntityManagerFactory("song-test");
         em = emf.createEntityManager();
-
-
         //songTestObjekt mit Werte init.
         songTest = new Song();
 
@@ -42,29 +50,22 @@ public class SongResourceTest {
 
     }
 
-    @BeforeTest
-    public void initializeDatabase() {
-        songResource = new SongResource();
-        songResource.em = em;
-    }
-
-    @AfterClass
-    public void tearDown() {
-        em.clear();
-        em.close();
-        emf.close();
-    }
-
-
     @Test
-    public void findSongByID() {
+    public void testFindSongWhenValidIdShouldReturnAccepted() {
         Response song5Response = songResource.getSingleRowRecord(5);
         System.out.println(song5Response);
         Assert.assertEquals(song5Response.getStatus(), 200);
     }
 
     @Test
-    public void findAllSong() {
+    public void testFindSongWhenUnvalidIdShouldReturnNotFound() {
+        Response song5Response = songResource.getSingleRowRecord(50);
+        System.out.println(song5Response);
+        Assert.assertEquals(song5Response.getStatus(), 404);
+    }
+
+    @Test
+    public void testFindAllSongShouldReturnNotNull() {
         List<Song> songList = songResource.getAllRecords();
         for(Song song:songList) {
             System.out.println(song);
@@ -73,24 +74,25 @@ public class SongResourceTest {
     }
 
     @Test
-    public void putSongWithSameId() {
+    public void testPutSongWhenSameIdShouldReturnNoContent() {
         songTest.setSongId(5);
         Response response = songResource.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.NO_CONTENT, response.getStatusInfo());
     }
 
     @Test
-    public void putSongWithNotSameId() {
+    public void testPutSongWhenNotSameIdShouldReturnBadRequest() {
         songTest.setSongId(10);
         Response response = songResource.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 
     @Test
-    public void putSongWithNonExistanceId() {
+    public void testPutSongWhenNonExistanceIdShouldReturnBadRequest() {
         songTest.setSongId(5);
         Response response = songResource.updateRecord(200, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
+
 
 }
