@@ -51,7 +51,6 @@ public class AuthenticationEndpoint {
     }
 
 
-
     private String issueToken() {
         // Issue a token (can be a random String persisted to a database or a JWT token)
         // The issued token must be associated to a user
@@ -63,12 +62,17 @@ public class AuthenticationEndpoint {
 
     /**
      * check it the user exist in the database
+     *
      * @param userId
      * @param pass
      * @throws Exception
      */
-    private void authenticate(String userId, String pass) throws Exception{
+    private void authenticate(String userId, String pass) throws Exception {
 
+        //hier liefert entschluesselter Passwort zurueck
+
+        pass = reverseString(pass);
+        System.out.println(pass);
         CriteriaBuilder criteriaBuilder = emfactory.getCriteriaBuilder();
         CriteriaQuery<User> criteriaQuery = criteriaBuilder.createQuery(User.class);
         Root<User> userRoot = criteriaQuery.from(User.class);
@@ -84,10 +88,22 @@ public class AuthenticationEndpoint {
         criteriaQuery.where(finalPredicate);
 
 
-        if( entitymanager.createQuery(criteriaQuery).getResultList().size() != 1)
+        if (entitymanager.createQuery(criteriaQuery).getResultList().size() != 1)
             throw new AuthenticationException("User does not exists in the database");
 
     }
 
+    /**
+     *  der Benutzer gibt immer umgekehrter Passwort und hiermit kann er enschluesselt werden
+     * @param passAsString password des Benutzers
+     * @return reversedString as String
+     */
+    private String reverseString(String passAsString) {
+        String reversedString ="";
+        for (int i = passAsString.length() - 1; i >= 0; i--) {
+            reversedString = reversedString + passAsString.charAt(i);
+        }
+        return reversedString;
+    }
 
 }

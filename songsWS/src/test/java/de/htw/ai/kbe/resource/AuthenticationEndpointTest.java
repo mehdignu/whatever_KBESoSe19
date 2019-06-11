@@ -1,12 +1,14 @@
 package de.htw.ai.kbe.resource;
 
 import de.htw.ai.kbe.entities.User;
-import de.htw.ai.kbe.resource.AuthenticationEndpoint;
-import org.junit.*;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Application;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -86,7 +88,7 @@ public class AuthenticationEndpointTest extends JerseyTest {
     public void testAuthenticateUserWhenUserExistShouldReturnAccepted() {
         Response response = target("/auth")
                 .queryParam("userId", "mmuster")
-                .queryParam("secret", "passwd123")
+                .queryParam("secret", "321dwssap")
                 .request()
                 .get();
 

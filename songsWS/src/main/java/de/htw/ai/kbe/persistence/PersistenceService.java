@@ -12,15 +12,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 @Singleton
 public class PersistenceService {
 
-    @PersistenceUnit(name= Constants.PERS_UNIT_NAME)
-    EntityManagerFactory emf;
-
-    private EntityManager em;
-
-    public PersistenceService() {}
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory(Constants.PERS_UNIT_NAME);
 
     public EntityManager getEntityManager() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(Constants.PERS_UNIT_NAME);
         return emf.createEntityManager();
     }
 

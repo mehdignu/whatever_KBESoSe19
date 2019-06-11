@@ -8,7 +8,6 @@
         <!-- add classes -->
         <class>de.htw.ai.kbe.entities.Song</class>
         <class>de.htw.ai.kbe.resource.SongResource</class>
-        <class>de.htw.ai.kbe.resource.ManageResource</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
