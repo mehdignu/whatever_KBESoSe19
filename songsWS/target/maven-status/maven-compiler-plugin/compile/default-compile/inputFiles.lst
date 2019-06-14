@@ -1,0 +1,9 @@
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/Constants.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/AuthenticationFilter.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/SongResource.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/persistence/PersistenceService.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/Secured.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/interfaces/ManageResource.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/entities/Song.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/resource/AuthenticationEndpoint.java
+/home/s0554960/whatever_KBESoSe19/songsWS/src/main/java/de/htw/ai/kbe/entities/User.java

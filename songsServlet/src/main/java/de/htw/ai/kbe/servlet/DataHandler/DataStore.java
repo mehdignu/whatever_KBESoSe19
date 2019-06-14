@@ -23,8 +23,13 @@ public class DataStore {
 
 
     private Map<Integer, Song> songs;
+
+    public static int getLatestID() {
+        return latestID;
+    }
+
     private static int latestID;
-    private static String filePath;
+    private static String filePath = "";
 
     public DataStore() {
         this.songs = new HashMap<>();

@@ -1,0 +1,9 @@
+de/htw/ai/kbe/resource/Constants.class
+de/htw/ai/kbe/persistence/PersistenceService.class
+de/htw/ai/kbe/resource/AuthenticationFilter.class
+de/htw/ai/kbe/entities/Song.class
+de/htw/ai/kbe/resource/SongResource.class
+de/htw/ai/kbe/interfaces/ManageResource.class
+de/htw/ai/kbe/entities/User.class
+de/htw/ai/kbe/resource/Secured.class
+de/htw/ai/kbe/resource/AuthenticationEndpoint.class

@@ -6,8 +6,6 @@ import de.htw.ai.kbe.servlet.DataHandler.utils.Constants;
 import de.htw.ai.kbe.servlet.pojo.Song;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
-import org.json.JSONObject;
-import org.json.XML;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -24,12 +22,16 @@ public class SongsServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private static final Logger log = Logger.getLogger(SongsServlet.class.getName());
-    private DataStore dataSource;
+
+    public DataStore getDataSource() {
+        return dataSource;
+    }
+
+    private DataStore dataSource = new DataStore();
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
 
-        this.dataSource = new DataStore();
         BasicConfigurator.configure();
         log.info("init()");
 
@@ -121,17 +123,30 @@ public class SongsServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+
+        // URL to return for the 'Location' header
+        final String URL = "https://localhost:8080/songsServlet?songId=";
+
         //get request content type
         String contentType = request.getHeader("Content-Type");
 
         Song song = DataStore.readJSONToSongs(request.getInputStream());
 
         song = dataSource.addSong(song);
+        String newSongURL = URL + song.getId();
 
-        if (contentType == null || !contentType.equals(Constants.JSON_TYPE))
+        if (!contentType.equals(Constants.JSON_TYPE)) {
             sendResponse(400, "could not save song !", response);
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "No valid JSON data.");
+        } else if(contentType == null) {
+            sendResponse(400, "empty JSON Data", response);
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Post body was empty.");
+        }
 
         sendResponse(200, "song saved under ID :" + song.getId(), response);
+        response.setHeader("Location", newSongURL);
+
+
 
     }
 
