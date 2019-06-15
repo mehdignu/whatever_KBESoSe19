@@ -8,7 +8,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 
 @Entity
-
 @XmlRootElement
 @Table(name = "songsService")
 public class Song {

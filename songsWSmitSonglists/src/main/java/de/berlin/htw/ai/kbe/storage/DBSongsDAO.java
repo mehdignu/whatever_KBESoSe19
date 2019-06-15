@@ -34,7 +34,7 @@ public class DBSongsDAO implements SongsDAO {
         System.out.println("getAllSong: Returning all songs!");
         em = emf.createEntityManager();
         em.getTransaction().begin();
-        songsList = em.createQuery("SELECT song FROM Song song", Song.class).getResultList();
+        songsList = em.createQuery("SELECT song FROM Song song").getResultList();
         em.getTransaction().commit();
         em.close();
         return songsList;
