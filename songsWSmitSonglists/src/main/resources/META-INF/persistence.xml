@@ -20,7 +20,7 @@
 
             <!-- The connection is released after each statement execution
                  and reacquired prior to running the next statement.  -->
-            <property name="hibernate.connection.release_mode" value="after_statement"></property>
+            <property name="hibernate.connection.handling_mode" value="after_statement"></property>
 
             <!-- Connection pool properties -->
             <property name="hibernate.c3p0.min_size" value="1"/>

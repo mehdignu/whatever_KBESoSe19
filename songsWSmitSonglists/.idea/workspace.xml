@@ -16,81 +16,11 @@
       <change beforePath="$PROJECT_DIR$/../songsWS/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/config/DependencyBinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/config/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/entities/Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/interfaces/SongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/resource/SongsWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/config/DependencyBinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/config/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/entities/Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/interfaces/SongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/classes/de/berlin/htw/ai/kbe/resource/SongsWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/activation-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/aopalliance-repackaged-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hibernate-core-5.2.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hk2-api-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hk2-locator-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/hk2-utils-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jackson-annotations-2.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jackson-module-jaxb-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.annotation-api-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.inject-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.json-1.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.json-api-1.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.json.bind-api-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jakarta.ws.rs-api-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/javax.servlet-api-3.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jaxb-api-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jaxb-core-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jaxb-impl-2.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-client-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-common-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-container-jdk-http-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-container-servlet-core-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-container-simple-http-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-entity-filtering-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-hk2-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-media-jaxb-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-media-json-binding-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-media-json-jackson-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-server-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-test-framework-provider-inmemory-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-test-framework-provider-jdk-http-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jersey-test-framework-provider-simple-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jjwt-api-0.10.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jjwt-impl-0.10.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/jjwt-jackson-0.10.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/mysql-connector-java-8.0.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/simple-common-6.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/simple-http-6.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/simple-transport-6.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/lib/yasson-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWS/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -138,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="96">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,21 +80,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+            <state relative-caret-position="-268">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#20#1" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+                <element signature="e#1671#1672#0" expanded="true" />
+                <element signature="e#2052#2053#0" expanded="true" />
+                <element signature="e#2076#2077#0" expanded="true" />
+                <element signature="e#2581#2582#0" expanded="true" />
+                <element signature="e#2607#2608#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="234">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -181,11 +139,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+            <state relative-caret-position="192">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#0#26#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="25" selection-start-line="6" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,8 +178,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hk2</find>
       <find>songsWS</find>
+      <find>hk2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,14 +193,15 @@
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/ManageResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/enums/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/persistence/PersistenceService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -253,7 +230,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
-    <option name="width" value="1268" />
+    <option name="width" value="1315" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -383,9 +360,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -620,18 +598,17 @@
       <workItem from="1560538370067" duration="14000" />
       <workItem from="1560538549053" duration="1109000" />
       <workItem from="1560540050768" duration="690000" />
-      <workItem from="1560584569798" duration="8672000" />
+      <workItem from="1560584569798" duration="18596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21896000" />
+    <option name="totallyTimeSpent" value="31820000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1268" height="1407" extended-state="0" />
-    <editor active="true" />
+    <frame x="-3" y="0" width="1315" height="1407" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120033115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17529881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -643,8 +620,8 @@
       <window_info anchor="bottom" id="Database Console" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3524333" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42072213" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -659,7 +636,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.07864238" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.10358566" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.20778146" />
@@ -699,16 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://020c562e-2592-4b26-834b-0b1d2d54fb4a/schema/_s0557318__SongDB/table/songsService">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="b4c95427-e1c4-458b-8eda-ebec6648c3f0">
@@ -721,41 +688,79 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/020c562e-2592-4b26-834b-0b1d2d54fb4a/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="81" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar!/org/glassfish/jersey/server/ApplicationHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/hk2/hk2-api/2.5.0/hk2-api-2.5.0.jar!/org/glassfish/hk2/utilities/binding/AbstractBinder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar!/org/glassfish/jersey/internal/Errors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+        <state relative-caret-position="-268">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#20#1" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#2076#2077#0" expanded="true" />
+            <element signature="e#2581#2582#0" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state relative-caret-position="64">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -769,10 +774,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="25" selection-start-line="6" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#0#26#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -782,10 +803,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>songsWSmitSonglists:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -793,6 +816,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>JPA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -831,7 +855,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -851,6 +874,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
