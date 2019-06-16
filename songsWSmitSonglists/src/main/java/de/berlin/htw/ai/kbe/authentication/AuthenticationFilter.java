@@ -1,15 +1,17 @@
 package de.berlin.htw.ai.kbe.authentication;
 
+import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
+
 import javax.annotation.Priority;
 import javax.naming.AuthenticationException;
+import javax.ws.rs.NotAuthorizedException;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
@@ -57,8 +59,8 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
         // Abort the filter chain with a 401 status code response
         // The WWW-Authenticate header is sent along with the response
-        requestContext.abortWith(
-                Response.status(Response.Status.UNAUTHORIZED).build());
+        //requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+        requestContext.abortWith(new GenericExceptionMapper().toResponse(new NotAuthorizedException("")));
     }
 
     private void validateToken(String token) throws Exception {

@@ -1,6 +1,7 @@
 package de.berlin.htw.ai.kbe.authentication;
 
 import de.berlin.htw.ai.kbe.entities.User;
+import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -51,8 +52,8 @@ public class AuthenticationEndpoint {
             return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();
 
         } catch (Exception e) {
-
-            return Response.status(Response.Status.FORBIDDEN).build();
+            //return Response.status(Response.Status.FORBIDDEN).build();
+            return new GenericExceptionMapper().toResponse(new ForbiddenException());
         }
     }
 
