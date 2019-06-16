@@ -1,6 +1,7 @@
 package de.berlin.htw.ai.kbe.storage;
 
 import de.berlin.htw.ai.kbe.entities.Song;
+import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 
@@ -8,6 +9,8 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.ws.rs.ForbiddenException;
+import javax.ws.rs.NotAllowedException;
 import javax.ws.rs.core.*;
 import java.util.List;
 
@@ -124,6 +127,7 @@ public class DBSongsDAO implements SongsDAO {
     @Override
     public Response deleteRecord(Integer id) {
         response = Response.status(Response.Status.METHOD_NOT_ALLOWED).entity("").build();
+        //return new GenericExceptionMapper().toResponse(new NotAllowedException(""));
         return response;
     }
 

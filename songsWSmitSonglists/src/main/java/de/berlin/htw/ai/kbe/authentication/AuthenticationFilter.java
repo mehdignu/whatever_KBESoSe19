@@ -20,7 +20,6 @@ import java.io.IOException;
 @Priority(Priorities.AUTHENTICATION)
 public class AuthenticationFilter implements ContainerRequestFilter {
 
-
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
