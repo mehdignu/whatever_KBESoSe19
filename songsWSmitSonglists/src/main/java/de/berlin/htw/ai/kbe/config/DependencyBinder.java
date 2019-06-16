@@ -12,11 +12,10 @@ import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 public class DependencyBinder extends AbstractBinder {
     @Override
     protected void configure() {
-        bind (Persistence
-                .createEntityManagerFactory("songDB-PU"))
-                .to(EntityManagerFactory.class);
-        bind(DBSongsDAO.class)
-                .to(SongsDAO.class)
-                .in(Singleton.class);
+
+        bind(Persistence.createEntityManagerFactory("songDB-PU")).to(EntityManagerFactory.class);
+
+        bind(DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
+
     }
 }

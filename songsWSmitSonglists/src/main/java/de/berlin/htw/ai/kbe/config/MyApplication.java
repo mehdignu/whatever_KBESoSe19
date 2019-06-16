@@ -9,5 +9,6 @@ public class MyApplication extends ResourceConfig {
     public MyApplication() {
         register(new DependencyBinder());
         packages(true, "de.berlin.htw.ai.kbe.resource");
+        packages(true, "de.berlin.htw.ai.kbe.authentication");
     }
 }

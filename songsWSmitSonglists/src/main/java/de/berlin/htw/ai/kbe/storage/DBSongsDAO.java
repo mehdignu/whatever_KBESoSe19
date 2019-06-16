@@ -1,6 +1,7 @@
 package de.berlin.htw.ai.kbe.storage;
 
 import de.berlin.htw.ai.kbe.entities.Song;
+import de.berlin.htw.ai.kbe.interfaces.Secured;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 
 import javax.inject.Inject;
@@ -9,6 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.core.*;
 import java.util.List;
+
 
 @Singleton
 public class DBSongsDAO implements SongsDAO {
@@ -21,7 +23,6 @@ public class DBSongsDAO implements SongsDAO {
     private Response response;
 
     private EntityManager em;
-
     private EntityManagerFactory emf;
 
     @Inject
@@ -29,41 +30,50 @@ public class DBSongsDAO implements SongsDAO {
         this.emf = emf;
     }
 
+    @Secured
     @Override
     public List<Song> getAllRecords() {
         System.out.println("getAllSong: Returning all songs!");
         em = emf.createEntityManager();
         em.getTransaction().begin();
-        songsList = em.createQuery("SELECT song FROM Song song").getResultList();
-        em.getTransaction().commit();
-        em.close();
-        return songsList;
+        try {
+            songsList = em.createQuery("SELECT song FROM Song song").getResultList();
+            em.getTransaction().commit();
+            return songsList;
+        } finally {
+            em.close();
+        }
     }
 
+    @Secured
     @Override
     public Response getSingleRowRecord(Integer id) {
         song = new Song();
         em = emf.createEntityManager();
         em.getTransaction().begin();
-        song = em.find(Song.class, id);
-        if (song != null) {    //wie ist die richtige Bedingung?
-            System.out.println("getSong: Returning song for id " + id);
-            response = Response.status(Response.Status.OK).entity(song).type(MediaType.APPLICATION_XML).build();
-        } else {
-            response = Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
+        try {
+            song = em.find(Song.class, id);
+            if (song != null) {
+                System.out.println("getSong: Returning song for id " + id);
+                response = Response.status(Response.Status.OK).entity(song).type(MediaType.APPLICATION_XML).build();
+            } else {
+                response = Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
+            }
+            return response;
+        } finally {
+            em.getTransaction().commit();
+            em.close();
         }
-        em.getTransaction().commit();
-        em.close();
-        return response;
     }
 
+    @Secured
     @Override
     public Response createRecord(Song t) {
         song = new Song();
+        System.out.println("Trying to post/insert new Song in DB");
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
         try {
-            System.out.println("Trying to post/insert new Song in DB");
-            em = emf.createEntityManager();
-            em.getTransaction().begin();
             setRecordDetails(t);
             em.persist(song);
             em.getTransaction().commit();
@@ -76,18 +86,19 @@ public class DBSongsDAO implements SongsDAO {
         } finally {
             em.close();
         }
-
         return response;
     }
 
+    @Secured
     @Override
     public Response updateRecord(Integer id, Song t) {
-        song = new Song();
-        try {
-            em = emf.createEntityManager();
-            em.getTransaction().begin();
-            song = em.find(Song.class, id);
 
+        song = new Song();
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        try {
+            song = em.find(Song.class, id);
             if (song != null) {
                 if (id == t.getSongId()) {
                     System.out.println("updateSong: updating song information for id " + id);
@@ -103,30 +114,16 @@ public class DBSongsDAO implements SongsDAO {
                 System.out.println("No song could be found with the given Id");
                 response = Response.status(Response.Status.BAD_REQUEST).entity("").build();
             }
-        } catch (Exception e) {
-            System.out.println("There is a problem as follow in Method Update: \n" + e);
-            em.getTransaction().rollback();
-
+            return response;
+        } finally {
+            em.close();
         }
-        em.close();
-        return response;
     }
 
+    @Secured
     @Override
     public Response deleteRecord(Integer id) {
-        song = new Song();
-        em = emf.createEntityManager();
-        em.getTransaction().begin();
-        song = em.find(Song.class, id);
-        if (song != null) {
-            System.out.println("deleteSong: deleting song for id " + id);
-            em.remove(song);
-            response = Response.status(Response.Status.NO_CONTENT).entity("").build();
-        } else {
-            response = Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
-        }
-        em.getTransaction().commit();
-        em.close();
+        response = Response.status(Response.Status.METHOD_NOT_ALLOWED).entity("").build();
         return response;
     }
 
