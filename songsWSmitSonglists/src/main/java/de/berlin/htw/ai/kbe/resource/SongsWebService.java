@@ -1,6 +1,7 @@
 package de.berlin.htw.ai.kbe.resource;
 
 import de.berlin.htw.ai.kbe.entities.Song;
+import de.berlin.htw.ai.kbe.interfaces.Secured;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 
 import javax.inject.Inject;
@@ -14,6 +15,7 @@ import java.util.List;
  * Root resource (exposed at "songs" path)
  */
 @Path("/songs")
+@Secured
 public class SongsWebService {
 
     private SongsDAO songsDAO;

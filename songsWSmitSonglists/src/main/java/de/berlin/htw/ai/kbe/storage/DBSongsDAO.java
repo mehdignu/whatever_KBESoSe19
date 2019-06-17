@@ -1,6 +1,7 @@
 package de.berlin.htw.ai.kbe.storage;
 
 import de.berlin.htw.ai.kbe.entities.Song;
+import de.berlin.htw.ai.kbe.interfaces.Secured;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 
 import javax.inject.Inject;
@@ -11,7 +12,7 @@ import javax.persistence.PersistenceContext;
 import javax.ws.rs.core.*;
 import java.util.List;
 
-
+@Secured
 @Singleton
 public class DBSongsDAO implements SongsDAO {
 

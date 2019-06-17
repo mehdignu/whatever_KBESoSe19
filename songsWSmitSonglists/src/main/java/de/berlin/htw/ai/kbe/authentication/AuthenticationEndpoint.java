@@ -28,7 +28,7 @@ public class AuthenticationEndpoint {
     @Inject
     public AuthenticationEndpoint(EntityManagerFactory emf) {
         this.emf = emf;
-        em = emf.createEntityManager();
+        em = this.emf.createEntityManager();
     }
 
     protected static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
@@ -70,9 +70,9 @@ public class AuthenticationEndpoint {
     /**
      * check it the user exist in the database
      *
-     * @param userId
-     * @param pass
-     * @throws Exception
+     * @param userId username
+     * @param pass  password
+     * @throws Exception as AuthenticationException if the user was not found
      */
     private void authenticate(String userId, String pass) throws Exception {
 
@@ -106,11 +106,11 @@ public class AuthenticationEndpoint {
      * @return reversedString as String
      */
     private String reverseString(String passAsString) {
-        String reversedString ="";
+        StringBuilder reversedString = new StringBuilder();
         for (int i = passAsString.length() - 1; i >= 0; i--) {
-            reversedString = reversedString + passAsString.charAt(i);
+            reversedString.append(passAsString.charAt(i));
         }
-        return reversedString;
+        return reversedString.toString();
     }
 
 }

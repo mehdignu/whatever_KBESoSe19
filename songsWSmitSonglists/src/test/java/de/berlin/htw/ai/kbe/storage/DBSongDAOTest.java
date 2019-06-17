@@ -3,6 +3,7 @@ package de.berlin.htw.ai.kbe.storage;
 import de.berlin.htw.ai.kbe.entities.Song;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
+import org.glassfish.jersey.test.TestProperties;
 import org.hibernate.Session;
 import org.hibernate.jdbc.Work;
 import org.junit.*;
@@ -37,6 +38,8 @@ public class DBSongDAOTest extends JerseyTest {
 
     @Override
     protected Application configure() {
+        enable(TestProperties.LOG_TRAFFIC);
+        enable(TestProperties.DUMP_ENTITY);
         return new ResourceConfig(DBSongsDAO.class);
     }
 
@@ -76,7 +79,10 @@ public class DBSongDAOTest extends JerseyTest {
 
     @After
     public void clearAfter() {
-        em.close();
+        if (em.isOpen()) {
+            em.clear();
+            em.close();
+        }
     }
 
 
