@@ -30,6 +30,7 @@ public class DBSongDAOTest extends JerseyTest {
 
     private static EntityManagerFactory emf;
     private static EntityManager em;
+
     private static Song songTest;
 
     private static DBSongsDAO dbSongsDAO;
@@ -44,9 +45,10 @@ public class DBSongDAOTest extends JerseyTest {
     public static void init() {
 
         emf = Persistence.createEntityManagerFactory("song-test");
+        em = emf.createEntityManager();
+
         dbSongsDAO = new DBSongsDAO(emf);
-        dbSongsDAO.em = emf.createEntityManager();
-        em = dbSongsDAO.em;
+        dbSongsDAO.em = em;
 
         // new dataset for every test case
         Session session = em.unwrap(Session.class);
@@ -72,11 +74,11 @@ public class DBSongDAOTest extends JerseyTest {
 
     }
 
-    @Test
-    public void testJustReturnTrue() {
-        boolean isTrue = true;
-        Assert.assertTrue(isTrue);
+    @After
+    public void clearAfter() {
+        em.close();
     }
+
 
     @Test
     public void testFindSongWhenValidIdShouldReturnAccepted() {

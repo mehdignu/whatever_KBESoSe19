@@ -5,7 +5,6 @@ import de.berlin.htw.ai.kbe.entities.Song;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Secured
 public interface SongsDAO {
 
     List<Song> getAllRecords();

@@ -1,13 +1,13 @@
 package de.berlin.htw.ai.kbe.storage;
 
 import de.berlin.htw.ai.kbe.entities.Song;
-import de.berlin.htw.ai.kbe.interfaces.Secured;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
 import javax.ws.rs.core.*;
 import java.util.List;
 
@@ -18,23 +18,31 @@ public class DBSongsDAO implements SongsDAO {
     //get the absolute path
     @Context
     private UriInfo uriInfo;
+
     private List<Song> songsList;
     private Song song;
+
     private Response response;
 
+    @PersistenceContext
     protected EntityManager em;
-    private EntityManagerFactory emf;
+
+
+    private static EntityManagerFactory emf;
+
+    public static EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
 
     @Inject
     public DBSongsDAO(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
-    @Secured
     @Override
     public List<Song> getAllRecords() {
         System.out.println("getAllSong: Returning all songs!");
-        em = emf.createEntityManager();
+        em = getEntityManager();
         em.getTransaction().begin();
         try {
             songsList = em.createQuery("SELECT song FROM Song song").getResultList();
@@ -45,11 +53,10 @@ public class DBSongsDAO implements SongsDAO {
         }
     }
 
-    @Secured
     @Override
     public Response getSingleRowRecord(Integer id) {
         song = new Song();
-        em = emf.createEntityManager();
+        em = getEntityManager();
         em.getTransaction().begin();
         try {
             song = em.find(Song.class, id);
@@ -59,19 +66,19 @@ public class DBSongsDAO implements SongsDAO {
             } else {
                 response = Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
             }
-            return response;
         } finally {
             em.getTransaction().commit();
             em.close();
+            return response;
         }
     }
 
-    @Secured
     @Override
     public Response createRecord(Song t) {
+        response = null;
         song = new Song();
         System.out.println("Trying to post/insert new Song in DB");
-        em = emf.createEntityManager();
+        em = getEntityManager();
         em.getTransaction().begin();
         try {
             setRecordDetails(t);
@@ -85,16 +92,15 @@ public class DBSongsDAO implements SongsDAO {
             em.getTransaction().rollback();
         } finally {
             em.close();
+            return response;
         }
-        return response;
+
     }
 
-    @Secured
     @Override
     public Response updateRecord(Integer id, Song t) {
-
         song = new Song();
-        em = emf.createEntityManager();
+        em = getEntityManager();
         em.getTransaction().begin();
 
         try {
@@ -107,20 +113,20 @@ public class DBSongsDAO implements SongsDAO {
                     em.getTransaction().commit();
                     response = Response.status(Response.Status.NO_CONTENT).entity("").build();
                 } else {
-                    System.out.println("A song has been found, but the given Id in payload does not match");
+                    System.out.println("A song has been found, but the given Id in payload does not match or Id is missing");
                     response = Response.status(Response.Status.BAD_REQUEST).entity("").build();
                 }
             } else {
                 System.out.println("No song could be found with the given Id");
                 response = Response.status(Response.Status.BAD_REQUEST).entity("").build();
             }
-            return response;
+
         } finally {
             em.close();
+            return response;
         }
     }
 
-    @Secured
     @Override
     public Response deleteRecord(Integer id) {
         response = Response.status(Response.Status.METHOD_NOT_ALLOWED).entity("").build();
