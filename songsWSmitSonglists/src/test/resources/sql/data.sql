@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS songsService;
+DROP TABLE IF EXISTS usersService;
+
 CREATE TABLE IF NOT EXISTS songsService (
 songId INTEGER,
 album  VARCHAR(50),
