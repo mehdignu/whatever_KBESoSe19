@@ -9,7 +9,7 @@ import java.util.List;
 public class DBPlaylistDAO implements PlaylistDAO {
 
     @Override
-    public List<Playlist> getAllPlaylists() {
+    public List<Playlist> getAllPlaylists(String userId) {
         return null;
     }
 
@@ -19,12 +19,12 @@ public class DBPlaylistDAO implements PlaylistDAO {
     }
 
     @Override
-    public Response createPLaylist() {
+    public Response createPLaylist(Playlist playlist) {
         return null;
     }
 
     @Override
-    public Response deletePlaylist(Integer songListId) {
+    public Response deletePlaylist(Integer songlistId) {
         return null;
     }
 

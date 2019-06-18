@@ -891,65 +891,102 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="223" parent="2" name="songsService"/>
-    <table id="224" parent="2" name="usersService"/>
-    <column id="225" parent="223" name="songId">
+    <table id="223" parent="2" name="songlistService"/>
+    <table id="224" parent="2" name="songsService"/>
+    <table id="225" parent="2" name="usersService"/>
+    <column id="226" parent="223" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="227" parent="223" name="owner">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="228" parent="223" name="playlistName">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="229" parent="223" name="isPublic">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="230" parent="223" name="owner">
+      <ColNames>owner</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="231" parent="223" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="232" parent="223" name="songlistService_ibfk_1">
+      <ColNames>owner</ColNames>
+      <RefSchemaName>_s0557318__SongDB</RefSchemaName>
+      <RefTableName>usersService</RefTableName>
+      <RefColNames>userId</RefColNames>
+    </foreign-key>
+    <column id="233" parent="224" name="songId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="223" name="title">
+    <column id="234" parent="224" name="title">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="223" name="artist">
+    <column id="235" parent="224" name="artist">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="223" name="album">
+    <column id="236" parent="224" name="album">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="223" name="released">
+    <column id="237" parent="224" name="released">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="230" parent="223" name="PRIMARY">
+    <key id="238" parent="224" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>songId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="231" parent="224" name="userId">
+    <column id="239" parent="225" name="userId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="224" name="password">
+    <column id="240" parent="225" name="password">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="224" name="firstName">
+    <column id="241" parent="225" name="firstName">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="224" name="lastName">
+    <column id="242" parent="225" name="lastName">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="224" name="PRIMARY">
+    <key id="243" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId</ColNames>
       <Primary>1</Primary>

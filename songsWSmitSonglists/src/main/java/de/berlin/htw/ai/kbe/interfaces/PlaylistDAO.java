@@ -7,12 +7,12 @@ import java.util.List;
 
 public interface PlaylistDAO {
 
-    List<Playlist> getAllPlaylists();
+    List<Playlist> getAllPlaylists(String userID);
 
     Response getSinglePlaylist(Integer playlistId);
 
-    Response createPLaylist();
+    Response createPLaylist(Playlist playlist);
 
-    Response deletePlaylist(Integer songListId);
+    Response deletePlaylist(Integer songlistId);
 
 }

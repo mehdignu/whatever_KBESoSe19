@@ -14,8 +14,8 @@ public class PlaylistWebService {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public List<Playlist> getAllPlaylists() {
-        return playlistDAO.getAllPlaylists();
+    public List<Playlist> getAllPlaylists(@QueryParam("userId") String userID) {
+        return playlistDAO.getAllPlaylists(userID);
     }
 
     @GET
@@ -28,15 +28,15 @@ public class PlaylistWebService {
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
-    public Response createPlaylist() {
-        return playlistDAO.createPLaylist();
+    public Response createPlaylist(Playlist playlist) {
+        return playlistDAO.createPLaylist(playlist);
     }
 
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response deletePlaylist(Integer songListId) {
-        return playlistDAO.deletePlaylist(songListId);
+    public Response deletePlaylist(Integer songlistId) {
+        return playlistDAO.deletePlaylist(songlistId);
     }
 
 }

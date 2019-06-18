@@ -1,18 +1,18 @@
 package de.berlin.htw.ai.kbe.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Set;
+import javax.xml.bind.annotation.*;
+import java.util.List;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Table(name = "songListsService")
+@Table(name = "songlistService")
 public class Playlist {
 
     @Id
@@ -20,15 +20,25 @@ public class Playlist {
     @NotNull
     private Integer id;
 
-    @ManyToOne
     //bidirectional oneToMany user from songlist to userId in User
+    //userId as Foriegnkey
+    @ManyToOne
+    @JoinColumn(name= "userId")
     private User owner;
 
     private String playlistName;
+
     private boolean isPublic;
 
     //here unidirectional manyToMany of song to songlist
-    private Set<Song> songs;
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(name = "list_song",
+            joinColumns = {@JoinColumn(name = "listId")}, inverseJoinColumns = {
+            @JoinColumn(name = "songId")})
+    @XmlElementWrapper(name = "songs")
+    @XmlElement(name = "song")
+    @JsonProperty(value = "songs")
+    private List<Song> songs;
 
     public Integer id() {
         return id;
@@ -62,11 +72,11 @@ public class Playlist {
         isPublic = aPublic;
     }
 
-    public Set<Song> getSongs() {
+    public List<Song> getSongs() {
         return songs;
     }
 
-    public void setSongs(Set<Song> songs) {
+    public void setSongs(List<Song> songs) {
         this.songs = songs;
     }
 

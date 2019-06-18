@@ -1,9 +1,8 @@
 package de.berlin.htw.ai.kbe.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
 @Entity
 @XmlRootElement
@@ -15,6 +14,10 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
+
+    @OneToMany(mappedBy="playlist",
+        cascade=CascadeType.ALL, orphanRemoval=true)
+    private List<Playlist> playlists;
 
     public String getUserId() {
         return userId;
