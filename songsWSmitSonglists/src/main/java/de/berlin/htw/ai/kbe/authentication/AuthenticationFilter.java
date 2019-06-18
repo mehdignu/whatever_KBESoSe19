@@ -2,6 +2,7 @@ package de.berlin.htw.ai.kbe.authentication;
 
 import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
+import de.berlin.htw.ai.kbe.storage.DBUserDAO;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 
@@ -67,7 +68,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
         try {
 
-            Jwts.parser().setSigningKey(AuthenticationEndpoint.key).parseClaimsJws(token).getSignature();
+            Jwts.parser().setSigningKey(DBUserDAO.key).parseClaimsJws(token).getSignature();
 
 
         } catch (JwtException e) {

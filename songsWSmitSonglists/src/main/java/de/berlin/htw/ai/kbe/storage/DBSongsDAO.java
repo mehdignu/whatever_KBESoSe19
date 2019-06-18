@@ -130,6 +130,7 @@ public class DBSongsDAO implements SongsDAO {
 
     @Override
     public Response deleteRecord(Integer id) {
+        System.out.println("This action is not allowed!");
         response = Response.status(Response.Status.METHOD_NOT_ALLOWED).entity("").build();
         //return new GenericExceptionMapper().toResponse(new NotAllowedException(""));
         return response;

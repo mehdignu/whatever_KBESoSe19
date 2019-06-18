@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7842ab18-fb87-407a-b4c8-1797f0fbd10d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/UsersDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/UserWebService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../songsWS/.idea/dataSources/fec7fe2d-ca27-430b-ad96-a79a4177cf4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/.idea/dataSources/fec7fe2d-ca27-430b-ad96-a79a4177cf4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../songsWS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../songsWS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/.idea/workspace.xml" afterDir="false" />
@@ -15,100 +17,11 @@
       <change beforePath="$PROJECT_DIR$/../songsWS/target/classes/de/htw/ai/kbe/resource/SongResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/target/classes/de/htw/ai/kbe/resource/SongResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../songsWS/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../songsWS/target/test-classes/de/htw/ai/kbe/resource/SongResourceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/config/DependencyBinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/config/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/entities/Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/errorhandler/GenericExceptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/interfaces/AuthenticatedUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/interfaces/Secured.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/interfaces/SongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/model/ErrorMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/resource/SongsWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/berlin/htw/ai/kbe/storage/DBSongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/config/DependencyBinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/config/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/entities/Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/errorhandler/GenericExceptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/interfaces/AuthenticatedUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/interfaces/Secured.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/interfaces/SongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/model/ErrorMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/resource/SongsWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/classes/de/berlin/htw/ai/kbe/storage/DBSongsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/FastInfoset-1.2.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/aopalliance-repackaged-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/c3p0-0.9.5.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hibernate-c3p0-5.2.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hibernate-core-5.2.12.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hk2-api-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hk2-locator-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/hk2-utils-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/istack-commons-runtime-3.0.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jackson-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jackson-module-jaxb-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jakarta.annotation-api-1.3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jakarta.inject-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jakarta.servlet-api-4.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jakarta.ws.rs-api-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/javax.annotation-api-1.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/javax.ws.rs-api-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jaxb-api-2.4.0-b180725.0427.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jaxb-runtime-2.4.0-b180725.0644.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-client-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-common-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-container-jdk-http-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-container-servlet-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-container-servlet-core-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-entity-filtering-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-hk2-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-media-jaxb-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-media-json-jackson-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-server-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-test-framework-core-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jersey-test-framework-provider-jdk-http-2.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/jjwt-api-0.10.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/mchange-commons-java-0.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/mysql-connector-java-5.1.46.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/txw2-2.4.0-b180725.0644.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/songsWSmitSonglists/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/berlin/htw/ai/kbe/storage/DBSongDAOTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sql/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -152,7 +65,70 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/PlaylistDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="15" column="48" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="73" column="35" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="73" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -189,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/errorhandling/UncaughtException.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/Secured.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/UsersDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/UserWebService.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/Secured.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/AuthenticatedUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/AuthenticationFilter.java" />
@@ -204,16 +179,21 @@
         <option value="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/SongResourceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/AuthWebService.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/UserWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/Playlist.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/PlaylistDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java" />
       </list>
     </option>
   </component>
@@ -242,7 +222,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
-    <option name="width" value="1624" />
+    <option name="width" value="1370" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -251,6 +231,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,12 +240,111 @@
               <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
               <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kbe" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="songsWSmitSonglists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,8 +361,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\interfaces" />
+      <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\resource" />
+      <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\storage" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="de.berlin.htw.ai.kbe.storage" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.berlin.htw.ai.kbe.entities" />
+      <recent name="de.berlin.htw.ai.kbe.errorhandler" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\authentication" />
@@ -289,9 +379,6 @@
       <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\interfaces" />
       <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\main\java\de\berlin\htw\ai\kbe\resource" />
       <recent name="D:\KBE\whatever_KBESoSe19\songsWSmitSonglists\src\test\resources" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="de.berlin.htw.ai.kbe.errorhandler" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -306,7 +393,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AuthenticationEndpointTest">
+  <component name="RunManager" selected="JUnit.DBSongDAOTest">
     <configuration name="AuthenticationEndpointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWSmitSonglists" />
       <extension name="coverage">
@@ -585,8 +672,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthenticationEndpointTest" />
         <item itemvalue="JUnit.DBSongDAOTest" />
+        <item itemvalue="JUnit.AuthenticationEndpointTest" />
         <item itemvalue="JUnit.DBSongDAOTest.testPutSongWhenSameIdShouldReturnNoContent" />
         <item itemvalue="JUnit.DBSongDAOTest.testFindSongWhenValidIdShouldReturnAccepted" />
         <item itemvalue="JUnit.DBSongDAOTest.testFindAllSongShouldReturnNotNull" />
@@ -620,13 +707,11 @@
       <workItem from="1560757643297" duration="7535000" />
       <workItem from="1560787022891" duration="12225000" />
       <workItem from="1560809558562" duration="2168000" />
+      <workItem from="1560814659710" duration="7358000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DBSongDAOTest - 2019.06.17 at 18h 02m 20s.xml">
-      <configuration name="DBSongDAOTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AuthenticationEndpointTest - 2019.06.17 at 18h 09m 52s.xml">
       <configuration name="AuthenticationEndpointTest" configurationId="JUnit" />
     </history-entry>
@@ -654,14 +739,18 @@
     <history-entry file="AuthenticationEndpointTest - 2019.06.18 at 00h 42m 42s.xml">
       <configuration name="AuthenticationEndpointTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DBSongDAOTest - 2019.06.18 at 02h 11m 28s.xml">
+      <configuration name="DBSongDAOTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99098000" />
+    <option name="totallyTimeSpent" value="106456000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1624" height="1407" extended-state="0" />
+    <frame x="-2" y="0" width="1370" height="1407" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20460358" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21221374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -672,7 +761,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33987442" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34379905" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46075353" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -684,12 +773,12 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32922733" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32967034" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.30141288" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.083120205" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.099236645" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.20671244" />
@@ -794,26 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/Song.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.4.199/h2-1.4.199.jar!/org/h2/message/DbException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
@@ -856,16 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="75" column="40" selection-start-line="49" selection-start-column="8" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/errorhandler/GenericExceptionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -884,43 +943,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/AuthWebService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/Secured.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/UsersDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="4" selection-start-line="7" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/UserWebService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="34" column="17" selection-start-line="33" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -934,20 +960,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/test-framework/jersey-test-framework-core/2.28/jersey-test-framework-core-2.28.jar!/org/glassfish/jersey/test/JerseyTest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="290">
+          <caret line="134" column="26" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="176">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -956,34 +1011,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/config/DependencyBinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/test-framework/jersey-test-framework-core/2.28/jersey-test-framework-core-2.28.jar!/org/glassfish/jersey/test/JerseyTest.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="134" column="26" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+        <state relative-caret-position="68">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/AuthenticationEndpointTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/berlin/htw/ai/kbe/storage/DBSongDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        <state relative-caret-position="400">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/UserWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/UsersDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBSongsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#26#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/SongsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="4" selection-start-line="7" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="7" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/entities/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/SongsWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="73" column="35" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="73" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,5 @@
 package de.berlin.htw.ai.kbe.storage;
 
-import de.berlin.htw.ai.kbe.authentication.AuthenticationEndpoint;
 import de.berlin.htw.ai.kbe.entities.User;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
@@ -22,7 +21,7 @@ public class AuthenticationEndpointTest extends JerseyTest {
 
     @Override
     protected Application configure() {
-        return new ResourceConfig(AuthenticationEndpoint.class);
+        return new ResourceConfig(DBUserDAO.class);
     }
 
 

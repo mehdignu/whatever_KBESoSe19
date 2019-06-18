@@ -1,7 +1,7 @@
-package de.berlin.htw.ai.kbe.authentication;
+package de.berlin.htw.ai.kbe.storage;
 
 import de.berlin.htw.ai.kbe.entities.User;
-import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
+import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -14,32 +14,23 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.security.Key;
 
-@Path("/auth")
-public class AuthenticationEndpoint {
+public class DBUserDAO implements UsersDAO {
 
-    private EntityManager em;
+    public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+
     private EntityManagerFactory emf;
+    private EntityManager em;
 
     @Inject
-    public AuthenticationEndpoint(EntityManagerFactory emf) {
+    public DBUserDAO(EntityManagerFactory emf) {
         this.emf = emf;
-        em = this.emf.createEntityManager();
+        this.em = this.emf.createEntityManager();
     }
 
-    protected static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response authenticateUser(@QueryParam("userId") String userID,
-                                     @QueryParam("secret") String password) {
-
-
+    public Response authenticateUser(String userID, String password) {
         try {
 
             // Authenticate the user using the credentials provided
@@ -52,11 +43,10 @@ public class AuthenticationEndpoint {
             return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();
 
         } catch (Exception e) {
-            //return Response.status(Response.Status.FORBIDDEN).build();
-            return new GenericExceptionMapper().toResponse(new ForbiddenException());
+
+            return Response.status(Response.Status.FORBIDDEN).build();
         }
     }
-
 
     private String issueToken() {
         // Issue a token (can be a random String persisted to a database or a JWT token)
@@ -70,9 +60,9 @@ public class AuthenticationEndpoint {
     /**
      * check it the user exist in the database
      *
-     * @param userId username
-     * @param pass  password
-     * @throws Exception as AuthenticationException if the user was not found
+     * @param userId
+     * @param pass
+     * @throws Exception
      */
     private void authenticate(String userId, String pass) throws Exception {
 
@@ -101,16 +91,16 @@ public class AuthenticationEndpoint {
     }
 
     /**
-     *  der Benutzer gibt immer umgekehrter Passwort und hiermit kann er enschluesselt werden
+     * der Benutzer gibt immer umgekehrter Passwort und hiermit kann er enschluesselt werden
+     *
      * @param passAsString password des Benutzers
      * @return reversedString as String
      */
     private String reverseString(String passAsString) {
-        StringBuilder reversedString = new StringBuilder();
+        String reversedString = "";
         for (int i = passAsString.length() - 1; i >= 0; i--) {
-            reversedString.append(passAsString.charAt(i));
+            reversedString = reversedString + passAsString.charAt(i);
         }
-        return reversedString.toString();
+        return reversedString;
     }
-
 }
