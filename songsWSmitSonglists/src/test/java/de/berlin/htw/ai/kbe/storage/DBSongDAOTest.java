@@ -26,6 +26,9 @@ import org.h2.tools.RunScript;
 
 import static org.junit.Assert.assertNotNull;
 
+/**
+ *  test is SUCCESSFULL
+ */
 
 public class DBSongDAOTest extends JerseyTest {
 

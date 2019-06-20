@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
 import javax.ws.rs.core.*;
 import java.util.List;
 
@@ -25,9 +24,7 @@ public class DBSongsDAO implements SongsDAO {
 
     private Response response;
 
-    @PersistenceContext
     protected EntityManager em;
-
 
     private static EntityManagerFactory emf;
 
@@ -132,7 +129,6 @@ public class DBSongsDAO implements SongsDAO {
     public Response deleteRecord(Integer id) {
         System.out.println("This action is not allowed!");
         response = Response.status(Response.Status.METHOD_NOT_ALLOWED).entity("").build();
-        //return new GenericExceptionMapper().toResponse(new NotAllowedException(""));
         return response;
     }
 

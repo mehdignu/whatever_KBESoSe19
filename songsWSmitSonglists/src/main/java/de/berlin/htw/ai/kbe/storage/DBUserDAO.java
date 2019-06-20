@@ -16,8 +16,12 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.ws.rs.core.Response;
 import java.security.Key;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DBUserDAO implements UsersDAO {
+
+    protected Map<String, String> userTokenList;
 
     public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
@@ -28,6 +32,11 @@ public class DBUserDAO implements UsersDAO {
     public DBUserDAO(EntityManagerFactory emf) {
         this.emf = emf;
         this.em = this.emf.createEntityManager();
+        this.userTokenList = new HashMap<>();
+    }
+
+    @Inject
+    public DBUserDAO() {
     }
 
     public Response authenticateUser(String userID, String password) {
@@ -38,6 +47,9 @@ public class DBUserDAO implements UsersDAO {
 
             // Issue a token for the user
             String token = issueToken();
+
+            //hier wird das Token abgespeicher. If already existed, the value will be updated
+            userTokenList.put(userID, token);
 
             // Return the token on the response
             return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();

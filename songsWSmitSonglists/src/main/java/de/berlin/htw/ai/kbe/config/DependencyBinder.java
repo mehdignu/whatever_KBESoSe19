@@ -4,7 +4,9 @@ import javax.inject.Singleton;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import de.berlin.htw.ai.kbe.interfaces.PlaylistDAO;
 import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
+import de.berlin.htw.ai.kbe.storage.DBPlaylistDAO;
 import de.berlin.htw.ai.kbe.storage.DBSongsDAO;
 import de.berlin.htw.ai.kbe.storage.DBUserDAO;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
@@ -21,6 +23,8 @@ public class DependencyBinder extends AbstractBinder {
         bind(DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
 
         bind(DBUserDAO.class).to(UsersDAO.class);
+
+        bind(DBPlaylistDAO.class).to(PlaylistDAO.class);
 
     }
 }

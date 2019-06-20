@@ -1,8 +1,13 @@
 package de.berlin.htw.ai.kbe.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import java.util.Set;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -21,6 +26,11 @@ public class Song {
     private String artist;
     private String album;
     private Integer released;
+
+    @JsonIgnore
+    @XmlTransient
+    @ManyToMany(mappedBy="songsService")
+    private Set<Playlist> lists;
 
     public Song() {
     }
