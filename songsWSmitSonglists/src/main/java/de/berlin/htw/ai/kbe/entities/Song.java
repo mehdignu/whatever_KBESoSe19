@@ -27,10 +27,13 @@ public class Song {
     private String album;
     private Integer released;
 
+
+    /**
     @JsonIgnore
     @XmlTransient
     @ManyToMany(mappedBy="songsService")
     private Set<Playlist> lists;
+    */
 
     public Song() {
     }

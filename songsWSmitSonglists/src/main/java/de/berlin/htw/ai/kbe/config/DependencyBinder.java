@@ -24,7 +24,7 @@ public class DependencyBinder extends AbstractBinder {
 
         bind(DBUserDAO.class).to(UsersDAO.class);
 
-        bind(DBPlaylistDAO.class).to(PlaylistDAO.class);
+        //bind(DBPlaylistDAO.class).to(PlaylistDAO.class);
 
     }
 }

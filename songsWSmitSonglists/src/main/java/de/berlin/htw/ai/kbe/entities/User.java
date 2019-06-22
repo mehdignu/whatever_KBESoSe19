@@ -15,9 +15,11 @@ public class User {
     private String firstName;
     private String lastName;
 
+    /**
     @OneToMany(mappedBy="playlist",
         cascade=CascadeType.ALL, orphanRemoval=true)
     private List<Playlist> playlists;
+    */
 
     public String getUserId() {
         return userId;
