@@ -4,16 +4,22 @@ import de.berlin.htw.ai.kbe.entities.Playlist;
 import de.berlin.htw.ai.kbe.interfaces.PlaylistDAO;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/songLists")
-@Secured
+//@Secured
 public class PlaylistWebService {
 
     private PlaylistDAO playlistDAO;
+
+    @Inject
+    public PlaylistWebService(PlaylistDAO playlistDAO) {
+        this.playlistDAO = playlistDAO;
+    }
 
     /**
      * Beispiel: ‘GET /songsWS/rest/songLists?userId=mmuster’ soll alle Songlisten von ‘mmuster’ an User ‘mmuster’
@@ -23,12 +29,12 @@ public class PlaylistWebService {
      *
      * @param userID
      * @return
-     *
      */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public List<Playlist> getAllPlaylists(@QueryParam("userId") String userID) {
+    public Response getAllPlaylists(@QueryParam("userId") String userID) {
         return playlistDAO.getAllPlaylists(userID);
+
     }
 
     /**
@@ -39,7 +45,6 @@ public class PlaylistWebService {
      *
      * @param playlistId
      * @return
-     *
      */
     @GET
     @Path("/{id}")
@@ -47,6 +52,7 @@ public class PlaylistWebService {
     public Response getSinglePlaylist(@PathParam("id") Integer playlistId) {
         return playlistDAO.getSinglePlaylist(playlistId);
     }
+// curl -X POST -H "Content-Type: application/json"  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
 
     /**
      * POST /songsWS/rest/songLists mit XML oder JSON-Payload legt eine neue Songlist für den User ‘mmuster’ an und
@@ -56,11 +62,9 @@ public class PlaylistWebService {
      *
      * @param playlist
      * @return
-     *
      */
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Produces(MediaType.TEXT_PLAIN)
     public Response createPlaylist(Playlist playlist) {
         return playlistDAO.createPLaylist(playlist);
     }

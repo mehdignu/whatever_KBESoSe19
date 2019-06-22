@@ -51,6 +51,8 @@ public class DBUserDAO implements UsersDAO {
             //hier wird das Token abgespeicher. If already existed, the value will be updated
             userTokenList.put(userID, token);
 
+            System.out.println(userTokenList);
+
             // Return the token on the response
             return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();
 

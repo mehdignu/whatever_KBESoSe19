@@ -83,7 +83,7 @@ public class DBSongsDAO implements SongsDAO {
             em.persist(song);
             em.getTransaction().commit();
             UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
-            uriBuilder.path(Integer.toString(song.getSongId()));
+            uriBuilder.path(Integer.toString(song.getId()));
             response = Response.created(uriBuilder.build()).build();
         } catch (Exception e) {
             System.out.println(e);
@@ -104,7 +104,7 @@ public class DBSongsDAO implements SongsDAO {
         try {
             song = em.find(Song.class, id);
             if (song != null) {
-                if (id == t.getSongId()) {
+                if (id == t.getId()) {
                     System.out.println("updateSong: updating song information for id " + id);
                     setRecordDetails(t);
                     em.merge(song);

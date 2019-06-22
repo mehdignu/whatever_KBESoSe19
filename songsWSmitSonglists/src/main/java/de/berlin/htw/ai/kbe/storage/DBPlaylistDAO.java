@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
-@Secured
+//@Secured
 public class DBPlaylistDAO implements PlaylistDAO {
 
     //get the absolute path
@@ -44,25 +44,11 @@ public class DBPlaylistDAO implements PlaylistDAO {
     }
 
     @Override
-    public List<Playlist> getAllPlaylists(String userId) {
+    public Response getAllPlaylists(String userId) {
 
-        System.out.println("Check User: " + userId);
-        em = getEntityManager();
 
-        if(dbUserDAO.userTokenList.containsKey(userId)) {
-            System.out.println("The user " + userId + " is logged in");
-            try {
-                em.getTransaction().begin();
-                Query newQuery = em.createQuery("SELECT playlist FROM Playlist playlist WHERE playlist.owner = :userId ");
-                newQuery.setParameter("userId", userId);
-                em.getTransaction().commit();
-            } finally {
-                em.close();
-            }
-        } else {
-            // throw an exception
-        }
-        return playlists;
+
+        return Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
     }
 
     @Override
@@ -76,9 +62,9 @@ public class DBPlaylistDAO implements PlaylistDAO {
     @Override
     public Response createPLaylist(Playlist playlist) {
 
-        // to implement
+        System.out.println(playlist);
 
-        return null;
+        return Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
     }
 
     @Override

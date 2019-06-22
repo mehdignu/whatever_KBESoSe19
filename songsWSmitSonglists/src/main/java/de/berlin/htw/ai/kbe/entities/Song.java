@@ -20,7 +20,7 @@ public class Song {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @NotNull
-    private Integer songId;
+    private Integer id;
 
     private String title;
     private String artist;
@@ -39,8 +39,8 @@ public class Song {
     }
 
     @NotNull
-    public Integer getSongId() {
-        return songId;
+    public Integer getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -60,8 +60,8 @@ public class Song {
     }
 
 
-    public void setSongId(Integer songId) {
-        this.songId = songId;
+    public void setId(Integer songId) {
+        this.id = songId;
     }
 
     public void setTitle(String title) {
@@ -83,7 +83,7 @@ public class Song {
     @Override
     public String toString() {
         return "Song{" +
-                "songId= " + songId +
+                "songId= " + id +
                 ", title=' " + title + '\'' +
                 ", artist=' " + artist + '\'' +
                 ", album=' " + album + '\'' +

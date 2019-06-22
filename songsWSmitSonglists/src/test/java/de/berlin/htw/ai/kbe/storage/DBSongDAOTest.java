@@ -114,21 +114,21 @@ public class DBSongDAOTest extends JerseyTest {
 
     @Test
     public void testPutSongWhenSameIdShouldReturnNoContent() {
-        songTest.setSongId(5);
+        songTest.setId(5);
         Response response = dbSongsDAO.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.NO_CONTENT, response.getStatusInfo());
     }
 
     @Test
     public void testPutSongWhenNotSameIdShouldReturnBadRequest() {
-        songTest.setSongId(10);
+        songTest.setId(10);
         Response response = dbSongsDAO.updateRecord(5, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }
 
     @Test
     public void testPutSongWhenNonExistanceIdShouldReturnBadRequest() {
-        songTest.setSongId(5);
+        songTest.setId(5);
         Response response = dbSongsDAO.updateRecord(200, songTest);
         Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
     }

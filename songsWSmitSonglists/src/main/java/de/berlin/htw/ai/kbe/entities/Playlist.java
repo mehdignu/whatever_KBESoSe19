@@ -20,6 +20,8 @@ public class Playlist {
     @NotNull
     private Integer id;
 
+    private String name;
+
     //bidirectional oneToMany user from songlist to userId in User
     //userId as Foriegnkey
     @ManyToOne
@@ -28,17 +30,17 @@ public class Playlist {
 
     private String playlistName;
 
-    private boolean isPublic;
+    private boolean isPrivate;
 
     //here unidirectional manyToMany of song to songlist
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "list_song",
             joinColumns = {@JoinColumn(name = "listId")}, inverseJoinColumns = {
             @JoinColumn(name = "songId")})
-    @XmlElementWrapper(name = "songs")
-    @XmlElement(name = "song")
-    @JsonProperty(value = "songs")
-    private List<Song> songs;
+    @XmlElementWrapper(name = "songList")
+    @XmlElement(name = "songList")
+    @JsonProperty(value = "songList")
+    private List<Song> songList;
 
     public Integer id() {
         return id;
@@ -64,30 +66,29 @@ public class Playlist {
         this.playlistName = playlistName;
     }
 
-    public boolean isPublic() {
-        return isPublic;
+    public boolean isPrivate() {
+        return isPrivate;
     }
 
     public void setPublic(boolean aPublic) {
-        isPublic = aPublic;
+        isPrivate = aPublic;
     }
 
-    public List<Song> getSongs() {
-        return songs;
+    public List<Song> getSongList() {
+        return songList;
     }
 
-    public void setSongs(List<Song> songs) {
-        this.songs = songs;
+    public void setSongList(List<Song> songs) {
+        this.songList = songs;
     }
 
-    @Override
-    public String toString() {
-        return "Playlist{" +
-                "id=" + id +
-                ", owner=" + owner +
-                ", playlistName='" + playlistName + '\'' +
-                ", isPublic=" + isPublic +
-                ", songs=" + songs +
-                '}';
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }

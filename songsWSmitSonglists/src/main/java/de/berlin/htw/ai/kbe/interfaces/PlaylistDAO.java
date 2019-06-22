@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PlaylistDAO {
 
-    List<Playlist> getAllPlaylists(String userID);
+    Response getAllPlaylists(String userID);
 
     Response getSinglePlaylist(Integer playlistId);
 
