@@ -49,10 +49,66 @@ public class DBPlaylistDAO implements PlaylistDAO {
     }
 
     @Override
-    public Response getAllPlaylists(String userId) {
+    public Response getAllPlaylists(String userId, String userReq) {
+
+        //get the owner of the lists
+        User user;
+        em = getEntityManager();
+        em.getTransaction().begin();
+        try {
+
+            user = em.find(User.class, userId);
+
+        } finally {
+            em.getTransaction().commit();
+            em.close();
+        }
+
+        List<Playlist> p;
+
+        if(userId.equals(userReq)){
+
+            em = getEntityManager();
+            em.getTransaction().begin();
+            try {
+
+                //give the user all his playlist lists
+                Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user AND l.isPrivate = :private ");
+                q.setParameter("user", user);
+                q.setParameter("private", false);
+                  p =   q.getResultList();
 
 
-        return Response.status(Response.Status.NOT_FOUND).entity("ID not found").build();
+            } finally {
+                em.getTransaction().commit();
+                em.close();
+            }
+
+
+        } else {
+
+            //give the user only the public playlist lists
+            em = getEntityManager();
+            em.getTransaction().begin();
+            try {
+
+                //give the user all his playlist lists
+                Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user AND l.isPrivate = :private ");
+                q.setParameter("user", user);
+                q.setParameter("private", false);
+                p =   q.getResultList();
+
+
+            } finally {
+                em.getTransaction().commit();
+                em.close();
+            }
+
+
+        }
+
+
+        return Response.status(Response.Status.OK).entity(p).build();
     }
 
     @Override
@@ -96,8 +152,12 @@ public class DBPlaylistDAO implements PlaylistDAO {
                     em.close();
                 }
 
+                UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
+                uriBuilder.path(Integer.toString(playlist.getId()));
 
-                return Response.status(Response.Status.BAD_REQUEST).entity("fuk you").build();
+                URI uri = uriBuilder.build();
+
+                return Response.status(Response.Status.BAD_REQUEST).entity(uri).build();
 
 
             } catch (NoSuchElementException | PersistenceException | IllegalArgumentException e) {

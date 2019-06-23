@@ -38,11 +38,20 @@ public class PlaylistWebService {
      */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response getAllPlaylists(@QueryParam("userId") String userID) {
-        return playlistDAO.getAllPlaylists(userID);
+    public Response getAllPlaylists(@QueryParam("userId") String userID, @Context HttpHeaders headers) {
+
+//        //get token from request header
+//        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+//
+//        //get user from token
+//        String userReq = usersDAO.getUserFromToken(authHeaders.get(0));
+
+//        return playlistDAO.getAllPlaylists(userID, userReq);
+        return playlistDAO.getAllPlaylists("mmuster", "eschuler");
 
     }
-
+//  curl -X POST -H "Content-Type: application/json" -H "Authorization: "  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
+//  curl -X GET -H "Content-Type: application/json" -v "http://localhost:8080/songsWS/rest/songLists"
     /**
      * Beispiel: ‘GET /songsWS/rest/songLists/22’ soll die Songliste 22 an User ‘mmuster’ zurückschicken. Eine Songliste
      * 22 muss existieren. Wenn die Liste mmuster gehört, dann kann sie an mmuster zurückgeschickt werden. Wenn die
