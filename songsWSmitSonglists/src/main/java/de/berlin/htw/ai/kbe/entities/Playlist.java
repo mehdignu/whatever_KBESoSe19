@@ -42,11 +42,11 @@ public class Playlist {
     @JsonProperty(value = "songList")
     private List<Song> songList;
 
-    public Integer id() {
+    public Integer getId() {
         return id;
     }
 
-    public void id(Integer playlistId) {
+    public void setId(Integer playlistId) {
         this.id = playlistId;
     }
 

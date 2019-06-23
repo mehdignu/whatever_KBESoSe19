@@ -3,9 +3,13 @@ package de.berlin.htw.ai.kbe.resource;
 import de.berlin.htw.ai.kbe.entities.Playlist;
 import de.berlin.htw.ai.kbe.interfaces.PlaylistDAO;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
+import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -15,10 +19,12 @@ import java.util.List;
 public class PlaylistWebService {
 
     private PlaylistDAO playlistDAO;
+    private UsersDAO usersDAO;
 
     @Inject
-    public PlaylistWebService(PlaylistDAO playlistDAO) {
+    public PlaylistWebService(PlaylistDAO playlistDAO, UsersDAO usersDAO) {
         this.playlistDAO = playlistDAO;
+        this.usersDAO = usersDAO;
     }
 
     /**
@@ -65,8 +71,15 @@ public class PlaylistWebService {
      */
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response createPlaylist(Playlist playlist) {
-        return playlistDAO.createPLaylist(playlist);
+    public Response createPlaylist(Playlist playlist, @Context HttpHeaders headers) {
+        return playlistDAO.createPLaylist(playlist, "mmuster");
+//        //get token from request header
+//        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+//
+//        //get user from token
+//        String userID = usersDAO.getUserFromToken(authHeaders.get(0));
+//
+//        return playlistDAO.createPLaylist(playlist, userID);
     }
 
     /**

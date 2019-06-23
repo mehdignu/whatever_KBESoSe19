@@ -25,8 +25,14 @@ public class DBUserDAO implements UsersDAO {
 
     public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    private EntityManagerFactory emf;
+    private static EntityManagerFactory emf;
     private EntityManager em;
+    private User user;
+
+    public static EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
+
 
     @Inject
     public DBUserDAO(EntityManagerFactory emf) {
@@ -39,6 +45,30 @@ public class DBUserDAO implements UsersDAO {
     public DBUserDAO() {
     }
 
+    public String getUserFromToken(String t){
+
+        return userTokenList.get(t);
+
+    }
+
+    public User getUserById(String userID){
+         user = new User();
+        em = getEntityManager();
+        em.getTransaction().begin();
+        try {
+            user = em.find(User.class, userID);
+            if (user != null) {
+                System.out.println("getUserById: Returning user for id " + userID);
+                return user;
+            } else {
+                return null;
+            }
+        } finally {
+            em.getTransaction().commit();
+            em.close();
+        }
+    }
+
     public Response authenticateUser(String userID, String password) {
         try {
 
@@ -49,9 +79,8 @@ public class DBUserDAO implements UsersDAO {
             String token = issueToken();
 
             //hier wird das Token abgespeicher. If already existed, the value will be updated
-            userTokenList.put(userID, token);
+            userTokenList.put(token, userID);
 
-            System.out.println(userTokenList);
 
             // Return the token on the response
             return Response.ok("\n --------- \n Your Token : \n" + token + " \n --------- \n").build();
@@ -83,7 +112,6 @@ public class DBUserDAO implements UsersDAO {
         //hier liefert entschluesselter Passwort zurueck
 
         pass = reverseString(pass);
-        System.out.println(pass);
         CriteriaBuilder criteriaBuilder = emf.getCriteriaBuilder();
         CriteriaQuery<User> criteriaQuery = criteriaBuilder.createQuery(User.class);
         Root<User> userRoot = criteriaQuery.from(User.class);

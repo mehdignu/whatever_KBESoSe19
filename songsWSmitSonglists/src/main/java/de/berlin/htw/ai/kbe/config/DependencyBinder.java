@@ -22,7 +22,7 @@ public class DependencyBinder extends AbstractBinder {
 
         bind(DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
 
-        bind(DBUserDAO.class).to(UsersDAO.class);
+        bind(DBUserDAO.class).to(UsersDAO.class).in(Singleton.class);
 
         bind(DBPlaylistDAO.class).to(PlaylistDAO.class);
 

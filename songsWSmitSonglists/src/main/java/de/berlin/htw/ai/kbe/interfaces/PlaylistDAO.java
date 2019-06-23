@@ -11,7 +11,7 @@ public interface PlaylistDAO {
 
     Response getSinglePlaylist(Integer playlistId);
 
-    Response createPLaylist(Playlist playlist);
+    Response createPLaylist(Playlist playlist, String userID);
 
     Response deletePlaylist(Integer songlistId);
 

@@ -28,6 +28,8 @@ public class DBSongsDAO implements SongsDAO {
 
     private static EntityManagerFactory emf;
 
+
+
     public static EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

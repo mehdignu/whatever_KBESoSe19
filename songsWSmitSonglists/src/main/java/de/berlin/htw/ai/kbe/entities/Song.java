@@ -20,6 +20,7 @@ public class Song {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @NotNull
+    @Column(name = "songId")
     private Integer id;
 
     private String title;
