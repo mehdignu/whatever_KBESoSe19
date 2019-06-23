@@ -72,14 +72,13 @@ public class PlaylistWebService {
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response createPlaylist(Playlist playlist, @Context HttpHeaders headers) {
-        return playlistDAO.createPLaylist(playlist, "mmuster");
-//        //get token from request header
-//        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
-//
-//        //get user from token
-//        String userID = usersDAO.getUserFromToken(authHeaders.get(0));
-//
-//        return playlistDAO.createPLaylist(playlist, userID);
+        //get token from request header
+        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+
+        //get user from token
+        String userID = usersDAO.getUserFromToken(authHeaders.get(0));
+
+        return playlistDAO.createPLaylist(playlist, userID);
     }
 
     /**

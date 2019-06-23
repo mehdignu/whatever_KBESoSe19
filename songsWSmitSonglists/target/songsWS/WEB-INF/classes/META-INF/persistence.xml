@@ -4,6 +4,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>de.berlin.htw.ai.kbe.entities.Song</class>
         <class>de.berlin.htw.ai.kbe.entities.User</class>
+        <class>de.berlin.htw.ai.kbe.entities.Playlist</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
 

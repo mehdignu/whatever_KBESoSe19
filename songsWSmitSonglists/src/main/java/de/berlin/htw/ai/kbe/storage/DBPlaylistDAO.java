@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceException;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import javax.ws.rs.core.*;
 import java.net.URI;
 import java.util.List;
@@ -77,26 +78,23 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 playlist.setOwner(owner);
 
 
-                if (playlist.getSongList() == null || playlist.getSongList().isEmpty()) {
+                if (playlist.getSongs() == null || playlist.getSongs().isEmpty()) {
                     throw new IllegalArgumentException("No songs given");
                 }
 
 
                 try {
+                    System.out.println("Trying to post/insert new playlist in DB");
                     em = getEntityManager();
                     em.getTransaction().begin();
                     em.persist(playlist);
                     em.getTransaction().commit();
                 } catch (Exception e) {
+                    System.out.println(e);
                     em.getTransaction().rollback();
-                    throw new PersistenceException("Could not persist entity: " + e.toString());
+                } finally {
+                    em.close();
                 }
-
-
-                UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
-                uriBuilder.path(Integer.toString(playlist.getId()));
-
-                URI uri = uriBuilder.build();
 
 
                 return Response.status(Response.Status.BAD_REQUEST).entity("fuk you").build();
@@ -123,7 +121,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
         boolean allGood = true;
 
-        for (Song s : playlist.getSongList()) {
+        for (Song s : playlist.getSongs()) {
 
             if (!isSongThere(s)) {
                 allGood = false;

@@ -1,12 +1,15 @@
 package de.berlin.htw.ai.kbe.entities;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Entity
+@Table(name="users")
 @XmlRootElement
-@Table(name = "usersService")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
 
     @Id
@@ -15,11 +18,6 @@ public class User {
     private String firstName;
     private String lastName;
 
-    /**
-    @OneToMany(mappedBy="playlist",
-        cascade=CascadeType.ALL, orphanRemoval=true)
-    private List<Playlist> playlists;
-    */
 
     public String getUserId() {
         return userId;
