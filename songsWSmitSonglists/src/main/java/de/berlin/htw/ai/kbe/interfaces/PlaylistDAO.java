@@ -9,11 +9,12 @@ public interface PlaylistDAO {
 
     Response getAllPlaylists(String userID, String userReq);
 
-    Response getSinglePlaylist(Integer playlistId);
+    Response getSinglePlaylist(Integer playlistId, String user);
 
     Response createPLaylist(Playlist playlist, String userID);
 
-    Response deletePlaylist(Integer songlistId);
+    Response deletePlaylist(Integer songlistId, String userID);
+
 
 
 }

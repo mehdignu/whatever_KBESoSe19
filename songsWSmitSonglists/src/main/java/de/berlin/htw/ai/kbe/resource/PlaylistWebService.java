@@ -40,14 +40,13 @@ public class PlaylistWebService {
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAllPlaylists(@QueryParam("userId") String userID, @Context HttpHeaders headers) {
 
-//        //get token from request header
-//        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
-//
-//        //get user from token
-//        String userReq = usersDAO.getUserFromToken(authHeaders.get(0));
+        //get token from request header
+        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
 
-//        return playlistDAO.getAllPlaylists(userID, userReq);
-        return playlistDAO.getAllPlaylists("mmuster", "eschuler");
+        //get user from token
+        String userReq = usersDAO.getUserFromToken(authHeaders.get(0));
+
+        return playlistDAO.getAllPlaylists(userID, userReq);
 
     }
 //  curl -X POST -H "Content-Type: application/json" -H "Authorization: "  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
@@ -64,8 +63,16 @@ public class PlaylistWebService {
     @GET
     @Path("/{id}")
     @Produces({MediaType.APPLICATION_XML})
-    public Response getSinglePlaylist(@PathParam("id") Integer playlistId) {
-        return playlistDAO.getSinglePlaylist(playlistId);
+    public Response getSinglePlaylist(@PathParam("id") Integer playlistId, @Context HttpHeaders headers) {
+
+        //get token from request header
+        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+
+        //get user from token
+        String userReq = usersDAO.getUserFromToken(authHeaders.get(0));
+
+
+        return playlistDAO.getSinglePlaylist(playlistId, userReq);
     }
 // curl -X POST -H "Content-Type: application/json"  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
 
@@ -102,8 +109,15 @@ public class PlaylistWebService {
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response deletePlaylist(Integer songlistId) {
-        return playlistDAO.deletePlaylist(songlistId);
+    public Response deletePlaylist(Integer songlistId, @Context HttpHeaders headers) {
+
+        //get token from request header
+        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+
+        //get user from token
+        String userID = usersDAO.getUserFromToken(authHeaders.get(0));
+
+        return playlistDAO.deletePlaylist(songlistId, userID);
     }
 
 }

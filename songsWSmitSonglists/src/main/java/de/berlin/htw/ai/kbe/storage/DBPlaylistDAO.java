@@ -7,10 +7,7 @@ import de.berlin.htw.ai.kbe.interfaces.PlaylistDAO;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
 
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceException;
-import javax.persistence.Query;
+import javax.persistence.*;
 import javax.transaction.Transactional;
 import javax.ws.rs.core.*;
 import java.net.URI;
@@ -66,7 +63,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
         List<Playlist> p;
 
-        if(userId.equals(userReq)){
+        if (userId.equals(userReq)) {
 
             em = getEntityManager();
             em.getTransaction().begin();
@@ -76,7 +73,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user AND l.isPrivate = :private ");
                 q.setParameter("user", user);
                 q.setParameter("private", false);
-                  p =   q.getResultList();
+                p = q.getResultList();
 
 
             } finally {
@@ -96,7 +93,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user AND l.isPrivate = :private ");
                 q.setParameter("user", user);
                 q.setParameter("private", false);
-                p =   q.getResultList();
+                p = q.getResultList();
 
 
             } finally {
@@ -112,11 +109,30 @@ public class DBPlaylistDAO implements PlaylistDAO {
     }
 
     @Override
-    public Response getSinglePlaylist(Integer playlistId) {
+    public Response getSinglePlaylist(Integer playlistId, String user) {
 
-        // to implement
+        Playlist p;
 
-        return null;
+        Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.id = :id");
+        q.setParameter("id", playlistId);
+        try {
+            p = (Playlist) q.getSingleResult();
+
+
+            if (p.getOwner().getUserId().equals(user)) {
+                return Response.status(Response.Status.OK).entity(p).build();
+            } else {
+                if (!p.isPrivate()) {
+                    return Response.status(Response.Status.OK).entity(p).build();
+                } else {
+                    return Response.status(Response.Status.BAD_REQUEST).entity("cannot access private list").build();
+                }
+            }
+
+        } catch (NoResultException e) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("no list have been found").build();
+        }
+
     }
 
     @Override
@@ -157,7 +173,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
                 URI uri = uriBuilder.build();
 
-                return Response.status(Response.Status.BAD_REQUEST).entity(uri).build();
+                return Response.status(Response.Status.OK).entity(uri).build();
 
 
             } catch (NoSuchElementException | PersistenceException | IllegalArgumentException e) {
@@ -187,7 +203,6 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 allGood = false;
                 break;
             }
-
         }
 
         return allGood;
@@ -223,11 +238,38 @@ public class DBPlaylistDAO implements PlaylistDAO {
     }
 
     @Override
-    public Response deletePlaylist(Integer playlistId) {
+    public Response deletePlaylist(Integer playlistId, String userID) {
+        Playlist p;
 
-        //to implement
+        Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.id = :id");
+        q.setParameter("id", playlistId);
+        try {
+            p = (Playlist) q.getSingleResult();
 
-        return null;
+
+            if (p.getOwner().getUserId().equals(userID)) {
+                //delete list
+
+                em = getEntityManager();
+                em.getTransaction().begin();
+                try {
+
+                    em.remove(p);
+
+                } finally {
+                    em.getTransaction().commit();
+                    em.close();
+
+                }
+
+            }
+
+        } catch (NoResultException e) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("no list have been found").build();
+        }
+
+        return Response.status(Response.Status.OK).entity("list have been deleted").build();
+
     }
 
 }
