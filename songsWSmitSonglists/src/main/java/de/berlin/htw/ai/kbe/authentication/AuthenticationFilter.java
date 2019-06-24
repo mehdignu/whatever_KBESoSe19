@@ -2,7 +2,7 @@ package de.berlin.htw.ai.kbe.authentication;
 
 import de.berlin.htw.ai.kbe.errorhandler.GenericExceptionMapper;
 import de.berlin.htw.ai.kbe.interfaces.Secured;
-import de.berlin.htw.ai.kbe.storage.DBUserDAO;
+import de.berlin.htw.ai.kbe.DBUserDAO;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 

@@ -1,17 +1,13 @@
-package de.berlin.htw.ai.kbe.storage;
+package de.berlin.htw.ai.kbe.ressource;
 
-import de.berlin.htw.ai.kbe.authentication.AuthenticationFilter;
+import de.berlin.htw.ai.kbe.DBSongsDAO;
 import de.berlin.htw.ai.kbe.entities.Song;
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
-import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
 import de.berlin.htw.ai.kbe.resource.SongsWebService;
-import de.berlin.htw.ai.kbe.resource.UserWebService;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
-import org.glassfish.jersey.test.TestProperties;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -19,7 +15,6 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
 import javax.inject.Singleton;
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.ws.rs.client.Entity;
@@ -50,7 +45,7 @@ public class SongsWebServiceTest extends JerseyTest {
                     protected void configure() {
 
                         bind(Persistence.createEntityManagerFactory("Song-TEST-PU")).to(EntityManagerFactory.class);
-                        bind(DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
+                        bind(de.berlin.htw.ai.kbe.DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
                     }
                 });
     }

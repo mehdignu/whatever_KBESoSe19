@@ -1,4 +1,4 @@
-package de.berlin.htw.ai.kbe.storage;
+package de.berlin.htw.ai.kbe;
 
 import de.berlin.htw.ai.kbe.entities.Song;
 import de.berlin.htw.ai.kbe.interfaces.Secured;

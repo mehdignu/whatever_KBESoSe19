@@ -1,4 +1,4 @@
-package de.berlin.htw.ai.kbe.storage;
+package de.berlin.htw.ai.kbe;
 
 import de.berlin.htw.ai.kbe.entities.User;
 import org.glassfish.jersey.server.ResourceConfig;
