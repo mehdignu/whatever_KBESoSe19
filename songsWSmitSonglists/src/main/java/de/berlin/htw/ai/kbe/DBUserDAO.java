@@ -25,22 +25,22 @@ public class DBUserDAO implements UsersDAO {
 
     public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     @Inject
-    private static EntityManagerFactory emf;
+    private EntityManagerFactory emf;
     private EntityManager em;
     private User user;
 
-    public static EntityManager getEntityManager() {
+    public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
 
-    private static DBUserDAO instance = null;
-
-    public synchronized static DBUserDAO getInstance (){
-        if (instance == null) {
-            instance = new DBUserDAO();
-        }
-        return instance;
-    }
+//    private static DBUserDAO instance = null;
+//
+//    public synchronized static DBUserDAO getInstance (){
+//        if (instance == null) {
+//            instance = new DBUserDAO();
+//        }
+//        return instance;
+//    }
 
     @Inject
     public DBUserDAO(EntityManagerFactory emf) {

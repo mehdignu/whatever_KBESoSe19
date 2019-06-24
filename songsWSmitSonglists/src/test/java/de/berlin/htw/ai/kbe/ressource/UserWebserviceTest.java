@@ -1,54 +1,56 @@
-package de.berlin.htw.ai.kbe;
+package de.berlin.htw.ai.kbe.ressource;
 
-import de.berlin.htw.ai.kbe.entities.User;
+import de.berlin.htw.ai.kbe.DBUserDAO;
+import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
+import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
+import de.berlin.htw.ai.kbe.resource.SongsWebService;
+import de.berlin.htw.ai.kbe.resource.UserWebService;
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Assert;
-import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
+import javax.inject.Singleton;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.assertNotNull;
 
+public class UserWebserviceTest extends JerseyTest {
 
-public class AuthenticationEndpointTest extends JerseyTest {
 
+    @Mock
+    private UsersDAO DBUserDAO;
 
-    private static User userTest;
-
+    @Rule
+    public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Override
     protected Application configure() {
-        return new ResourceConfig(DBUserDAO.class);
+        return new ResourceConfig(UserWebService.class).register(
+                new AbstractBinder() {
+                    @Override
+                    protected void configure() {
+
+                        bind(Persistence.createEntityManagerFactory("Song-TEST-PU")).to(EntityManagerFactory.class);
+                        bind(de.berlin.htw.ai.kbe.DBUserDAO.class).to(UsersDAO.class).in(Singleton.class);
+                    }
+                });
     }
-
-
-    @BeforeClass
-    public static void init() {
-
-
-        userTest = new User();
-
-        userTest.setUserId("mmuster");
-        userTest.setPassword("password");
-        userTest.setFirstName("Maxime");
-        userTest.setLastName("Muster");
-
-
-    }
-
 
 
     @Test
     public void testAuthenticateUserWhenParametersAreEmptyShouldReturnForbidden() {
-        Response response = target("/auth")
-                .queryParam("userId", "")
-                .queryParam("secret", "")
-                .request()
-                .get();
-        Assert.assertEquals(403, response.getStatus());
+        Response res = target("/auth").queryParam("userId", "")
+                .queryParam("secret", "").request().get();
+        Assert.assertEquals(403, res.getStatus());
     }
 
 
@@ -100,4 +102,3 @@ public class AuthenticationEndpointTest extends JerseyTest {
     }
 
 }
-
