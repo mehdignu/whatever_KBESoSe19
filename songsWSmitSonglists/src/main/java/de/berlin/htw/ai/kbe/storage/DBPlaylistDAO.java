@@ -180,12 +180,8 @@ public class DBPlaylistDAO implements PlaylistDAO {
                     em.close();
                 }
 
-                UriBuilder uriBuilder = uriInfo.getAbsolutePathBuilder();
-                uriBuilder.path(Integer.toString(playlist.getId()));
 
-                URI uri = uriBuilder.build();
-
-                return Response.status(Response.Status.OK).entity(uri).build();
+                return Response.status(Response.Status.OK).entity("playlist created under ID "  + playlist.getId()).build();
 
 
             } catch (NoSuchElementException | PersistenceException | IllegalArgumentException e) {
@@ -310,7 +306,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 return Response.status(Response.Status.OK).entity("list have been deleted").build();
 
             } else {
-                return Response.status(Response.Status.FORBIDDEN).entity("you just simply cannot delete other people lists").build();
+                return Response.status(Response.Status.FORBIDDEN).entity("you cannot delete other people lists").build();
             }
 
         } catch (NoResultException e) {
