@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7842ab18-fb87-407a-b4c8-1797f0fbd10d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boo.json" beforeDir="false" afterPath="$PROJECT_DIR$/boo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="308">
+              <caret line="144" selection-start-line="144" selection-end-line="144" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#0#73#0" expanded="true" />
@@ -74,19 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/boo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-671">
+            <state relative-caret-position="-522">
               <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,18 +82,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_backup.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
+            <state relative-caret-position="471">
               <caret line="81" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -286,9 +263,9 @@
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/interfaces/PlaylistDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java" />
         <option value="$PROJECT_DIR$/boo.json" />
+        <option value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java" />
       </list>
     </option>
   </component>
@@ -432,36 +409,6 @@
               <item name="kbe" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="songsWS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="songsWSmitSonglists" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -477,7 +424,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -856,7 +803,7 @@
       <workItem from="1561297331719" duration="6641000" />
       <workItem from="1561306841006" duration="48000" />
       <workItem from="1561322906619" duration="162000" />
-      <workItem from="1561333026042" duration="4327000" />
+      <workItem from="1561333026042" duration="5065000" />
     </task>
     <servers />
   </component>
@@ -893,7 +840,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153274000" />
+    <option name="totallyTimeSpent" value="154012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1271,10 +1218,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java">
+    <entry file="file://$PROJECT_DIR$/boo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_backup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1291,27 +1252,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/authentication/AuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="247">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_backup.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+        <state relative-caret-position="-522">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/storage/DBPlaylistDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="308">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#0#73#0" expanded="true" />
@@ -1320,23 +1284,6 @@
             <element signature="e#0#129#1" expanded="true" />
             <element signature="e#0#41#1" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/berlin/htw/ai/kbe/resource/PlaylistWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-671">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1351,7 +1298,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1394,7 +1340,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>songsWS</last-edited>
+          <last-edited>songsWSmitSonglists</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

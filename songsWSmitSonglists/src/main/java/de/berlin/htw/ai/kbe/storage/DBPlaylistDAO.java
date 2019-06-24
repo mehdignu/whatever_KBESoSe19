@@ -96,6 +96,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
                 q.setParameter("user", user);
                 q.setParameter("private", false);
                 p = q.getResultList();
+                System.out.println(q.getResultList());
 
 
             } finally {
@@ -114,11 +115,17 @@ public class DBPlaylistDAO implements PlaylistDAO {
     public Response getSinglePlaylist(Integer playlistId, String user) {
 
         Playlist p;
+        em = getEntityManager();
+        em.getTransaction().begin();
 
         Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.id = :id");
         q.setParameter("id", playlistId);
         try {
             p = (Playlist) q.getSingleResult();
+
+            System.out.println(q.getSingleResult());
+
+            if(p != null){
 
 
             if (p.getOwner().getUserId().equals(user)) {
@@ -130,9 +137,12 @@ public class DBPlaylistDAO implements PlaylistDAO {
                     return Response.status(Response.Status.BAD_REQUEST).entity("cannot access private list").build();
                 }
             }
-
+            } else {
+                return Response.status(Response.Status.BAD_REQUEST).entity("No list have been found").build();
+            }
         } catch (NoResultException e) {
-            return Response.status(Response.Status.BAD_REQUEST).entity("no list have been found").build();
+            return Response.status(Response.Status.BAD_REQUEST).entity("No list have been found").build();
+
         }
 
     }
