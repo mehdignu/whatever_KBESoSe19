@@ -35,32 +35,11 @@ public class SongsWebServiceTest extends JerseyTest {
 
 
 
-//    @Override
-//    protected Application configure() {
-//
-//
-//
-//        return new ResourceConfig(SongsWebService.class, AuthenticationFilter.class, UserWebService.class).register(new AbstractBinder()
-//
-//        {
-//            @Override
-//            protected void configure() {
-//
-//               DBSongsDAO.    getInstance().inject(Persistence.createEntityManagerFactory("Song-TEST-PU"));
-//               DBUserDAO.getInstance().inject(Persistence.createEntityManagerFactory("Song-TEST-PU"));
-//
-//               bind(DBSongsDAO.class).to(SongsDAO.class).in(Singleton.class);
-//               bind(DBUserDAO.class).to(UsersDAO.class).in(Singleton.class);
-//            }
-//        });
-//
-//    }
-
 
     @Mock
-    private SongsDAO songsDAO;
+    private SongsDAO DBSongsDAO;
 
-    @Rule
+    @Rule   
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Override
@@ -78,6 +57,11 @@ public class SongsWebServiceTest extends JerseyTest {
 
 
 
+    /*
+
+    GET Methoden Testen
+
+     */
 
     @Test
     public void getSongWithValidIdShouldReturnSong() {
@@ -102,38 +86,59 @@ public class SongsWebServiceTest extends JerseyTest {
         Assert.assertEquals(404, res.getStatus());
     }
 
-//    @Test
-//    public void putSongJsonMitRichtigemId() {
-//
-//        int id = 1;
-//        String newTitle = "new Title";
-//        Response response;
-//        Song song = new Song();
-//        song.setTitle(newTitle);
-//        Entity<Song> ent = Entity.entity(song, MediaType.APPLICATION_JSON);
-//        response = target("/songs/" + id).request().put(ent);
-//        assertTrue(response.equals(DBSongsDAO.getInstance().getSingleRowRecord(id).getStatusInfo()));
-//
-//    }
-//
-//
-//    @Ignore
-//    public void testPutSongWhenNotSameIdShouldReturnBadRequest() {
-//        int id = 10;
-//        Response response;
-//        Song songTest = new Song();
-//        songTest.setId(5);
-//        Entity<Song> ent = Entity.entity(songTest, MediaType.APPLICATION_JSON);
-//        response = target("/songs/" + id).request().header("Authorization",TokenZumUnitTest.Token_Test).put(ent);
-//        assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
-//    }
-//
-//    @Ignore
-//    public void testPutSongWhenNonExistanceIdShouldReturnBadRequest() {
-//        songTest.setSongId(5);
-//        Response response = songResource.updateRecord(200, songTest);
-//        Assert.assertEquals(Response.Status.BAD_REQUEST, response.getStatusInfo());
-//    }
+    /*
+
+    PUT Methoden Testen
+
+     */
+
+
+
+    @Test
+    public void updateSongJSONWithWrongIdShouldReturnBadRequest() {
+        String newTitle = "new Title";
+        Response response;
+        Song song = new Song();
+        song.setTitle(newTitle);
+        Entity<Song> ent = Entity.entity(song, MediaType.APPLICATION_JSON);
+        response = target("/songs/50000" ).request().put(ent);
+        Assert.assertEquals(400, response.getStatus());
+    }
+
+
+    @Test
+    public void updateSongXMLWithWrongIdShouldReturnBadRequest() {
+        String newTitle = "new Title";
+        Response response;
+        Song song = new Song();
+        song.setTitle(newTitle);
+        Entity<Song> ent = Entity.entity(song, MediaType.APPLICATION_XML);
+        response = target("/songs/50000" ).request().put(ent);
+        Assert.assertEquals(400, response.getStatus());
+    }
+
+
+    @Test
+    public void updateSongJSONWithValidIdShouldReturn204AndUpdatedSong() {
+
+        Song song = new Song.Builder("16 lines").id(1).artist("BooHoo").album("boo ?").released(2016).build();
+        Response response;
+        response = target("/songs/1").request().put(Entity.json(song));
+        Assert.assertEquals(204, response.getStatus());
+    }
+
+
+
+    @Test
+    public void updateSongXMLWithValidIdShouldReturn204AndUpdatedSong() {
+
+        Song song = new Song.Builder("Beamerboy").id(1).artist("BooHoo").album("boo ?").released(2016).build();
+        Response response;
+        response = target("/songs/1").request().put(Entity.xml(song));
+        Assert.assertEquals(204, response.getStatus());
+    }
+
+
 
 
 }
