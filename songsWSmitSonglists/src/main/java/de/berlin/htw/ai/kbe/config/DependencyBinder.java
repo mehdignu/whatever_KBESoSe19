@@ -6,9 +6,9 @@ import javax.persistence.Persistence;
 
 import de.berlin.htw.ai.kbe.interfaces.PlaylistDAO;
 import de.berlin.htw.ai.kbe.interfaces.UsersDAO;
-import de.berlin.htw.ai.kbe.DBPlaylistDAO;
-import de.berlin.htw.ai.kbe.DBSongsDAO;
-import de.berlin.htw.ai.kbe.DBUserDAO;
+import de.berlin.htw.ai.kbe.storage.DBPlaylistDAO;
+import de.berlin.htw.ai.kbe.storage.DBSongsDAO;
+import de.berlin.htw.ai.kbe.storage.DBUserDAO;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 
 import de.berlin.htw.ai.kbe.interfaces.SongsDAO;
