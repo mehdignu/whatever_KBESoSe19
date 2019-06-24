@@ -1,5 +1,6 @@
 package de.berlin.htw.ai.kbe.storage;
 
+import com.sun.jdi.IntegerValue;
 import de.berlin.htw.ai.kbe.entities.Playlist;
 import de.berlin.htw.ai.kbe.entities.Song;
 import de.berlin.htw.ai.kbe.entities.User;
@@ -64,7 +65,6 @@ public class DBPlaylistDAO implements PlaylistDAO {
         List<Playlist> p;
 
 
-
         if (userId.equals(userReq)) {
 
             em = getEntityManager();
@@ -125,18 +125,18 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
             System.out.println(q.getSingleResult());
 
-            if(p != null){
+            if (p != null) {
 
 
-            if (p.getOwner().getUserId().equals(user)) {
-                return Response.status(Response.Status.OK).entity(p).build();
-            } else {
-                if (!p.isPrivate()) {
+                if (p.getOwner().getUserId().equals(user)) {
                     return Response.status(Response.Status.OK).entity(p).build();
                 } else {
-                    return Response.status(Response.Status.BAD_REQUEST).entity("cannot access private list").build();
+                    if (!p.isPrivate()) {
+                        return Response.status(Response.Status.OK).entity(p).build();
+                    } else {
+                        return Response.status(Response.Status.BAD_REQUEST).entity("cannot access private list").build();
+                    }
                 }
-            }
             } else {
                 return Response.status(Response.Status.BAD_REQUEST).entity("No list have been found").build();
             }
@@ -185,7 +185,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
                 URI uri = uriBuilder.build();
 
-                return Response.status(Response.Status.OK).entity("all right").build();
+                return Response.status(Response.Status.OK).entity(uri).build();
 
 
             } catch (NoSuchElementException | PersistenceException | IllegalArgumentException e) {
@@ -270,36 +270,53 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
     @Override
     public Response deletePlaylist(Integer playlistId, String userID) {
-        Playlist p;
+        Playlist p = null;
 
-        Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.id = :id");
-        q.setParameter("id", playlistId);
+
         try {
+            em = getEntityManager();
+            em.getTransaction().begin();
+
+            Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.id = :id");
+            q.setParameter("id", playlistId);
             p = (Playlist) q.getSingleResult();
+            System.out.print(q.getSingleResult());
+
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            em.getTransaction().rollback();
+        } finally {
+            em.close();
+        }
+
+
+        try {
 
 
             if (p.getOwner().getUserId().equals(userID)) {
                 //delete list
 
-                em = getEntityManager();
-                em.getTransaction().begin();
                 try {
+                    em = getEntityManager();
+                    em.getTransaction().begin();
+                    em.remove(em.contains(p) ? p : em.merge(p));
 
-                    em.remove(p);
-
-                } finally {
                     em.getTransaction().commit();
-                    em.close();
-
+                } catch (Exception e) {
+                    em.getTransaction().rollback();
+                    throw new PersistenceException("Could not delete entity: " + e.toString());
                 }
+                return Response.status(Response.Status.OK).entity("list have been deleted").build();
 
+            } else {
+                return Response.status(Response.Status.FORBIDDEN).entity("you just simply cannot delete other people lists").build();
             }
 
         } catch (NoResultException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity("no list have been found").build();
         }
 
-        return Response.status(Response.Status.OK).entity("list have been deleted").build();
 
     }
 

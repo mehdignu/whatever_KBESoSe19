@@ -108,7 +108,7 @@ public class PlaylistWebService {
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response deletePlaylist(Integer songlistId, @Context HttpHeaders headers) {
+    public Response deletePlaylist(@PathParam("id") Integer songlistId, @Context HttpHeaders headers) {
 
         //get token from request header
         List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
