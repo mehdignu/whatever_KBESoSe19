@@ -1,6 +1,5 @@
 package de.berlin.htw.ai.kbe.storage;
 
-import com.sun.jdi.IntegerValue;
 import de.berlin.htw.ai.kbe.entities.Playlist;
 import de.berlin.htw.ai.kbe.entities.Song;
 import de.berlin.htw.ai.kbe.entities.User;
@@ -9,12 +8,11 @@ import de.berlin.htw.ai.kbe.interfaces.Secured;
 
 import javax.inject.Inject;
 import javax.persistence.*;
-import javax.transaction.Transactional;
-import javax.ws.rs.core.*;
-import java.net.URI;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
 @Secured
 public class DBPlaylistDAO implements PlaylistDAO {

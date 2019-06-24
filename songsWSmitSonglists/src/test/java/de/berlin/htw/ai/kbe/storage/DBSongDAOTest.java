@@ -62,7 +62,7 @@ public class DBSongDAOTest extends JerseyTest {
             @Override
             public void execute(Connection connection) throws SQLException {
                 try {
-                    File script = new File(getClass().getResource("/sql/data.sql").getFile());
+                    File script = new File(getClass().getResource("META-INF/sql/data_set.sql").getFile());
                     RunScript.execute(connection, new FileReader(script));
                 } catch (FileNotFoundException e) {
                     throw new RuntimeException("could not initialize with script");

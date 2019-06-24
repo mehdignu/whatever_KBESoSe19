@@ -9,7 +9,7 @@
           <factory-entry name="songDB-PU" value="020c562e-2592-4b26-834b-0b1d2d54fb4a" />
         </datasource-mapping>
         <naming-strategy-map />
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/test/resources/META-INF/persistence..xml" />
       </configuration>
     </facet>
   </component>
