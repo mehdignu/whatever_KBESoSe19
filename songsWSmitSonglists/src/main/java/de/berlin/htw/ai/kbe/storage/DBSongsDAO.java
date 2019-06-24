@@ -29,6 +29,18 @@ public class DBSongsDAO implements SongsDAO {
     private static EntityManagerFactory emf;
 
 
+    public void inject(EntityManagerFactory emf){
+        this.emf = emf;
+    }
+
+    private static DBSongsDAO instance = null;
+
+    public synchronized static DBSongsDAO getInstance (){
+        if (instance == null) {
+            instance = new DBSongsDAO(emf);
+        }
+        return instance;
+    }
 
     public static EntityManager getEntityManager() {
         return emf.createEntityManager();

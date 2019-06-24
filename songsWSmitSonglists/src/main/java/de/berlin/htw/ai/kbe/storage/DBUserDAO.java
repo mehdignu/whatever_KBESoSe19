@@ -24,7 +24,7 @@ public class DBUserDAO implements UsersDAO {
     protected Map<String, String> userTokenList;
 
     public static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-
+    @Inject
     private static EntityManagerFactory emf;
     private EntityManager em;
     private User user;
@@ -33,12 +33,24 @@ public class DBUserDAO implements UsersDAO {
         return emf.createEntityManager();
     }
 
+    private static DBUserDAO instance = null;
+
+    public synchronized static DBUserDAO getInstance (){
+        if (instance == null) {
+            instance = new DBUserDAO();
+        }
+        return instance;
+    }
 
     @Inject
     public DBUserDAO(EntityManagerFactory emf) {
         this.emf = emf;
         this.em = this.emf.createEntityManager();
         this.userTokenList = new HashMap<>();
+    }
+
+    public void inject(EntityManagerFactory emf){
+        this.emf = emf;
     }
 
     @Inject
