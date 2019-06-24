@@ -76,7 +76,7 @@ public class DBUserDAO implements UsersDAO {
             authenticate(userID, password);
 
             // Issue a token for the user
-            String token = issueToken();
+            String token = issueToken(userID);
 
             //hier wird das Token abgespeicher. If already existed, the value will be updated
             userTokenList.put(token, userID);
@@ -91,12 +91,12 @@ public class DBUserDAO implements UsersDAO {
         }
     }
 
-    private String issueToken() {
+    private String issueToken(String userID) {
         // Issue a token (can be a random String persisted to a database or a JWT token)
         // The issued token must be associated to a user
         // Return the issued token
 
-        return Jwts.builder().setSubject("songDB-PU").signWith(key).compact();
+        return Jwts.builder().setIssuer(userID).setSubject("songDB-PU").signWith(key).compact();
     }
 
 

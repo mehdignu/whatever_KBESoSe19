@@ -15,7 +15,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/songLists")
-//@Secured
+@Secured
 public class PlaylistWebService {
 
     private PlaylistDAO playlistDAO;
@@ -49,8 +49,8 @@ public class PlaylistWebService {
         return playlistDAO.getAllPlaylists(userID, userReq);
 
     }
-//  curl -X POST -H "Content-Type: application/json" -H "Authorization: "  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
-//  curl -X GET -H "Content-Type: application/json" -v "http://localhost:8080/songsWS/rest/songLists"
+
+
     /**
      * Beispiel: ‘GET /songsWS/rest/songLists/22’ soll die Songliste 22 an User ‘mmuster’ zurückschicken. Eine Songliste
      * 22 muss existieren. Wenn die Liste mmuster gehört, dann kann sie an mmuster zurückgeschickt werden. Wenn die
@@ -74,7 +74,6 @@ public class PlaylistWebService {
 
         return playlistDAO.getSinglePlaylist(playlistId, userReq);
     }
-// curl -X POST -H "Content-Type: application/json"  -d "@boo.json" -v "http://localhost:8080/songsWS/rest/songLists"
 
     /**
      * POST /songsWS/rest/songLists mit XML oder JSON-Payload legt eine neue Songlist für den User ‘mmuster’ an und

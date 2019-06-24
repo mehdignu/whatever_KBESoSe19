@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
-//@Secured
+@Secured
 public class DBPlaylistDAO implements PlaylistDAO {
 
     //get the absolute path
@@ -63,6 +63,8 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
         List<Playlist> p;
 
+
+
         if (userId.equals(userReq)) {
 
             em = getEntityManager();
@@ -70,11 +72,11 @@ public class DBPlaylistDAO implements PlaylistDAO {
             try {
 
                 //give the user all his playlist lists
-                Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user AND l.isPrivate = :private ");
+                Query q = em.createQuery("SELECT l FROM Playlist l WHERE l.owner = :user");
                 q.setParameter("user", user);
-                q.setParameter("private", false);
                 p = q.getResultList();
 
+                System.out.println(q.getResultList());
 
             } finally {
                 em.getTransaction().commit();
@@ -173,7 +175,7 @@ public class DBPlaylistDAO implements PlaylistDAO {
 
                 URI uri = uriBuilder.build();
 
-                return Response.status(Response.Status.OK).entity(uri).build();
+                return Response.status(Response.Status.OK).entity("all right").build();
 
 
             } catch (NoSuchElementException | PersistenceException | IllegalArgumentException e) {
@@ -217,24 +219,43 @@ public class DBPlaylistDAO implements PlaylistDAO {
      * @return
      */
     private boolean isSongThere(Song s) {
-        song = new Song();
+
+
         em = getEntityManager();
         em.getTransaction().begin();
-        boolean res = false;
+        boolean isThere = false;
+
         try {
 
-            //for now i only check the id, aber es kann genauer sein
-            song = em.find(Song.class, s.getId());
-            if (song != null) {
-                res = true;
-            } else {
-                res = false;
+            Query q = em.createQuery("SELECT l FROM Song l WHERE l.id = :id AND l.album = :album AND l.artist = :artist AND l.released = :released AND l.title = :title");
+            q.setParameter("id", s.getId());
+            q.setParameter("album", s.getAlbum());
+            q.setParameter("artist", s.getArtist());
+            q.setParameter("released", s.getReleased());
+            q.setParameter("title", s.getTitle());
+
+
+            Song res;
+            try {
+                res = (Song) q.getSingleResult();
+                if (res != null) {
+                    isThere = true;
+                }
+
+
+            } catch (NoResultException e) {
+                return false;
             }
+
         } finally {
             em.getTransaction().commit();
             em.close();
-            return res;
+
         }
+
+        return isThere;
+
+
     }
 
     @Override

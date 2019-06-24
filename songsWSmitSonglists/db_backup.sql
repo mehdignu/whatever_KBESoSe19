@@ -36,7 +36,7 @@ CREATE TABLE `list_song` (
 
 LOCK TABLES `list_song` WRITE;
 /*!40000 ALTER TABLE `list_song` DISABLE KEYS */;
-INSERT INTO `list_song` VALUES (1,1),(1,2);
+INSERT INTO `list_song` VALUES (1,1),(1,2),(2,4),(2,5),(3,4),(3,5),(4,1),(4,2);
 /*!40000 ALTER TABLE `list_song` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +54,7 @@ CREATE TABLE `songlists` (
   `owner_userId` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK1hsb6h0xphq31367fob1mwmxv` (`owner_userId`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `songlists` (
 
 LOCK TABLES `songlists` WRITE;
 /*!40000 ALTER TABLE `songlists` DISABLE KEYS */;
-INSERT INTO `songlists` VALUES (1,_binary '','ElenasPrivate','mmuster');
+INSERT INTO `songlists` VALUES (1,_binary '','MmusterPrivate','mmuster'),(2,_binary '\0','MmusterPublic','mmuster'),(3,_binary '\0','ElenaPublic','eschuler'),(4,_binary '','EschulerPrivate','eschuler');
 /*!40000 ALTER TABLE `songlists` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -129,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 16:32:15
+-- Dump completed on 2019-06-24  2:50:58
